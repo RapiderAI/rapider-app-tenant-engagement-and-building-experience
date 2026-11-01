@@ -13,7 +13,7 @@
   "isPublic": true,
   "isPaid": false,
   "price": "Free",
-  "status": "application-definition-in-progress",
+  "status": "data-models-in-progress",
   "developerName": "Tansel Ozkusaksiz",
   "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
   "createdBy": "Tansel Ozkusaksiz",
@@ -31,7 +31,5783 @@
     "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
     "createdBy": "Tansel Ozkusaksiz"
   },
-  "dataModels": [],
+  "dataModels": [
+    {
+      "name": "CrmAccount",
+      "title": "Account",
+      "description": "Customer entity with credit limit, balance, and risk profile.",
+      "domainName": "Rapider CRM Suite",
+      "domainKey": "CRM",
+      "datatableName": "CrmAccount",
+      "dataTableName": "CrmAccount",
+      "sqlTableName": "crm_account",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ code }} - {{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "ledgerId",
+            "code",
+            "name",
+            "type"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "ledgerId"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 20,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "creditLimit",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "currentBalance",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "riskFlag",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "paymentTerms",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "accountOwner",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "taxId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "createdAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "accountCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "accountType",
+          "type": "string",
+          "description": "Allowed values: PROSPECT, CUSTOMER, PARTNER, COMPETITOR, HOUSEHOLD",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "PROSPECT",
+            "CUSTOMER",
+            "PARTNER",
+            "COMPETITOR",
+            "HOUSEHOLD"
+          ],
+          "options": [
+            "PROSPECT",
+            "CUSTOMER",
+            "PARTNER",
+            "COMPETITOR",
+            "HOUSEHOLD"
+          ]
+        },
+        {
+          "name": "customerTier",
+          "type": "string",
+          "description": "Allowed values: ENTERPRISE, MID_MARKET, SMB, VIP",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ENTERPRISE",
+            "MID_MARKET",
+            "SMB",
+            "VIP"
+          ],
+          "options": [
+            "ENTERPRISE",
+            "MID_MARKET",
+            "SMB",
+            "VIP"
+          ]
+        },
+        {
+          "name": "supportSlaTier",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryDomain",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "parentAccountId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "CrmAccount",
+          "referenceField": "id"
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "FinLegalEntity",
+          "referenceField": "id"
+        },
+        {
+          "name": "industry",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "revenue",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "website",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerPersonId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "ledger",
+          "type": "belongsTo",
+          "sourceModel": "CrmAccount",
+          "sourceField": "ledgerId",
+          "targetModel": "FinLedger",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The ledger this account belongs to."
+        },
+        {
+          "name": "parentAccount",
+          "type": "belongsTo",
+          "sourceModel": "CrmAccount",
+          "sourceField": "parentAccountId",
+          "targetModel": "CrmAccount",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmAccount parentAccount foreign key link to CrmAccount."
+        },
+        {
+          "name": "ownerEmployee",
+          "type": "belongsTo",
+          "sourceModel": "CrmAccount",
+          "sourceField": "ownerEmployeeId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmAccount ownerEmployee foreign key link to HrEmployee."
+        },
+        {
+          "name": "territory",
+          "type": "belongsTo",
+          "sourceModel": "CrmAccount",
+          "sourceField": "territoryId",
+          "targetModel": "CrmTerritory",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmAccount territory foreign key link to CrmTerritory."
+        },
+        {
+          "name": "defaultBillingProfile",
+          "type": "belongsTo",
+          "sourceModel": "CrmAccount",
+          "sourceField": "defaultBillingProfileId",
+          "targetModel": "FinBillingProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmAccount defaultBillingProfile foreign key link to FinBillingProfile."
+        }
+      ]
+    },
+    {
+      "name": "CrmContact",
+      "title": "Contact",
+      "description": "Represents an individual person, usually associated with an Account.",
+      "domainName": "Rapider CRM Suite",
+      "domainKey": "CRM",
+      "datatableName": "CrmContact",
+      "dataTableName": "CrmContact",
+      "sqlTableName": "crm_contact",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ firstName }} {{ lastName }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "firstName",
+          "lastName",
+          "email",
+          "jobTitle"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "firstName",
+            "lastName",
+            "accountId"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Always link a contact to an account if mentioned.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "Email must be a valid format if provided."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 15,
+          "hiddenFields": [],
+          "maskedFields": [
+            "phone"
+          ],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "accountId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "firstName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "fullName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phoneE164",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobSeniority",
+          "type": "string",
+          "description": "Allowed values: C_SUITE, VP, DIRECTOR, MANAGER, IC",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "C_SUITE",
+            "VP",
+            "DIRECTOR",
+            "MANAGER",
+            "IC"
+          ],
+          "options": [
+            "C_SUITE",
+            "VP",
+            "DIRECTOR",
+            "MANAGER",
+            "IC"
+          ]
+        },
+        {
+          "name": "buyingRole",
+          "type": "string",
+          "description": "Allowed values: ECONOMIC_BUYER, CHAMPION, EVALUATOR, PROCUREMENT, END_USER",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ECONOMIC_BUYER",
+            "CHAMPION",
+            "EVALUATOR",
+            "PROCUREMENT",
+            "END_USER"
+          ],
+          "options": [
+            "ECONOMIC_BUYER",
+            "CHAMPION",
+            "EVALUATOR",
+            "PROCUREMENT",
+            "END_USER"
+          ]
+        },
+        {
+          "name": "portalUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preferredLanguage",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timezone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "marketingConsentStatus",
+          "type": "string",
+          "description": "Allowed values: OPTED_IN, OPTED_OUT, UNSET",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "OPTED_IN",
+            "OPTED_OUT",
+            "UNSET"
+          ],
+          "options": [
+            "OPTED_IN",
+            "OPTED_OUT",
+            "UNSET"
+          ]
+        },
+        {
+          "name": "dncStatus",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Allowed values: ACTIVE, INACTIVE, BOUNCED, SUPPRESSED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "ACTIVE",
+            "INACTIVE",
+            "BOUNCED",
+            "SUPPRESSED"
+          ],
+          "options": [
+            "ACTIVE",
+            "INACTIVE",
+            "BOUNCED",
+            "SUPPRESSED"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "company",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "account",
+          "type": "belongsTo",
+          "sourceModel": "CrmContact",
+          "sourceField": "accountId",
+          "targetModel": "CrmAccount",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The account this contact is associated with."
+        },
+        {
+          "name": "opportunities",
+          "type": "hasMany",
+          "sourceModel": "CrmContact",
+          "sourceField": "id",
+          "targetModel": "CrmOpportunity",
+          "targetField": "primaryContactId",
+          "throughModel": null,
+          "description": "Opportunities where this contact is the primary stakeholder."
+        },
+        {
+          "name": "ownerEmployee",
+          "type": "belongsTo",
+          "sourceModel": "CrmContact",
+          "sourceField": "ownerEmployeeId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmContact ownerEmployee foreign key link to HrEmployee."
+        },
+        {
+          "name": "sourceCampaign",
+          "type": "belongsTo",
+          "sourceModel": "CrmContact",
+          "sourceField": "sourceCampaignId",
+          "targetModel": "MktCampaign",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "CrmContact sourceCampaign foreign key link to MktCampaign."
+        }
+      ]
+    },
+    {
+      "name": "FinInvoice",
+      "title": "Invoice",
+      "description": "Accounts Payable or Receivable invoice.",
+      "domainName": "Rapider Finance Suite",
+      "domainKey": "FIN",
+      "datatableName": "FinInvoice",
+      "dataTableName": "FinInvoice",
+      "sqlTableName": "fin_invoice",
+      "isolationScope": "ENTERPRISE_SHARED_GOVERNED",
+      "titleFieldTemplate": "{{ partnerName }} - {{ totalAmount }} {{ currency }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "partnerName"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "legalEntityId",
+            "type",
+            "partnerName",
+            "invoiceDate",
+            "totalAmount",
+            "currency"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "status"
+          ],
+          "additionalPrompt": "",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "legalEntityId",
+            "type"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify paid invoices.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 10,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "payments"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete approved or paid invoices.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "partnerName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invoiceDate",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "dueDate",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "totalAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "invoiceNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "accountId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "CrmAccount",
+          "referenceField": "id"
+        },
+        {
+          "name": "billingProfileId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "FinBillingProfile",
+          "referenceField": "id"
+        },
+        {
+          "name": "subscriptionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "FinSubscription",
+          "referenceField": "id"
+        },
+        {
+          "name": "customerOrderId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "OpsCustomerOrder",
+          "referenceField": "id"
+        },
+        {
+          "name": "issueDate",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "subtotalAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "taxAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "openAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "currencyCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "disputeStatus",
+          "type": "string",
+          "description": "Allowed values: NONE, IN_DISPUTE, RESOLVED) (from accreceivable",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NONE",
+            "IN_DISPUTE",
+            "RESOLVED) (from accreceivable"
+          ],
+          "options": [
+            "NONE",
+            "IN_DISPUTE",
+            "RESOLVED) (from accreceivable"
+          ]
+        },
+        {
+          "name": "eInvoiceClearanceStatus",
+          "type": "string",
+          "description": "Allowed values: NOT_REQUIRED, PENDING, CLEARED, REJECTED",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "NOT_REQUIRED",
+            "PENDING",
+            "CLEARED",
+            "REJECTED"
+          ],
+          "options": [
+            "NOT_REQUIRED",
+            "PENDING",
+            "CLEARED",
+            "REJECTED"
+          ]
+        },
+        {
+          "name": "customerName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "createdAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "legalEntity",
+          "type": "belongsTo",
+          "sourceModel": "FinInvoice",
+          "sourceField": "legalEntityId",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The legal entity this invoice belongs to."
+        },
+        {
+          "name": "payments",
+          "type": "hasMany",
+          "sourceModel": "FinInvoice",
+          "sourceField": "id",
+          "targetModel": "FinPayment",
+          "targetField": "invoiceId",
+          "throughModel": null,
+          "description": "Payments applied to this invoice."
+        },
+        {
+          "name": "account",
+          "type": "belongsTo",
+          "sourceModel": "FinInvoice",
+          "sourceField": "accountId",
+          "targetModel": "CrmAccount",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "FinInvoice account foreign key link to CrmAccount."
+        },
+        {
+          "name": "billingProfile",
+          "type": "belongsTo",
+          "sourceModel": "FinInvoice",
+          "sourceField": "billingProfileId",
+          "targetModel": "FinBillingProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "FinInvoice billingProfile foreign key link to FinBillingProfile."
+        },
+        {
+          "name": "subscription",
+          "type": "belongsTo",
+          "sourceModel": "FinInvoice",
+          "sourceField": "subscriptionId",
+          "targetModel": "FinSubscription",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "FinInvoice subscription foreign key link to FinSubscription."
+        },
+        {
+          "name": "customerOrder",
+          "type": "belongsTo",
+          "sourceModel": "FinInvoice",
+          "sourceField": "customerOrderId",
+          "targetModel": "OpsCustomerOrder",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "FinInvoice customerOrder foreign key link to OpsCustomerOrder."
+        }
+      ]
+    },
+    {
+      "name": "FinPaymentIntent",
+      "title": "Payment Intent",
+      "description": "Represents a request to move money, such as a supplier payment, refund, or transfer.",
+      "domainName": "Rapider Finance Suite",
+      "domainKey": "FIN",
+      "datatableName": "FinPaymentIntent",
+      "dataTableName": "FinPaymentIntent",
+      "sqlTableName": "fin_payment_intent",
+      "isolationScope": "ENTERPRISE_SHARED_GOVERNED",
+      "titleFieldTemplate": "{{ payeeName }} - {{ amount }} {{ currency }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "payeeName",
+          "payeeAccount",
+          "status"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "amount",
+            "currency",
+            "payeeName",
+            "providerId"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "status"
+          ],
+          "additionalPrompt": "Ensure the currency is a valid 3-letter ISO code. Default status to 'Pending'.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "If amount is over 10000, ensure a sourceDocumentId is provided."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "amount",
+            "currency",
+            "payeeName"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Only update status if authorized.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Cannot change providerId if status is 'Processing' or 'Executed'.",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify executed or failed payment intents.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [],
+          "maskedFields": [
+            "payeeAccount"
+          ],
+          "additionalPrompt": "Highlight failed payment intents."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "settlements"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete executed payment intents.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "batchId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "providerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "amount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "payeeName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "payeeAccount",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "sourceDocumentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "direction",
+          "type": "string",
+          "description": "Allowed values: INBOUND_COLLECTION, OUTBOUND_PAYOUT) (unifies billing & payments",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "INBOUND_COLLECTION",
+            "OUTBOUND_PAYOUT) (unifies billing & payments"
+          ],
+          "options": [
+            "INBOUND_COLLECTION",
+            "OUTBOUND_PAYOUT) (unifies billing & payments"
+          ]
+        },
+        {
+          "name": "accountId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "CrmAccount",
+          "referenceField": "id"
+        },
+        {
+          "name": "supplierId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "OpsSupplierProfile",
+          "referenceField": "id"
+        },
+        {
+          "name": "sourceDocumentType",
+          "type": "string",
+          "description": "Allowed values: INVOICE, SUPPLIER_BILL, EXPENSE_REPORT, PAYROLL_RUN, ORDER, REFUND",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "INVOICE",
+            "SUPPLIER_BILL",
+            "EXPENSE_REPORT",
+            "PAYROLL_RUN",
+            "ORDER",
+            "REFUND"
+          ],
+          "options": [
+            "INVOICE",
+            "SUPPLIER_BILL",
+            "EXPENSE_REPORT",
+            "PAYROLL_RUN",
+            "ORDER",
+            "REFUND"
+          ]
+        },
+        {
+          "name": "currencyCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "tokenRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "mandateRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "idempotencyKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "providerRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "payerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "batch",
+          "type": "belongsTo",
+          "sourceModel": "FinPaymentIntent",
+          "sourceField": "batchId",
+          "targetModel": "FinPaymentBatch",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The batch this payment intent belongs to."
+        },
+        {
+          "name": "provider",
+          "type": "belongsTo",
+          "sourceModel": "FinPaymentIntent",
+          "sourceField": "providerId",
+          "targetModel": "FinPaymentProvider",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The provider executing this payment intent."
+        },
+        {
+          "name": "settlements",
+          "type": "hasMany",
+          "sourceModel": "FinPaymentIntent",
+          "sourceField": "id",
+          "targetModel": "FinSettlement",
+          "targetField": "intentId",
+          "throughModel": null,
+          "description": "Settlements associated with this payment intent."
+        },
+        {
+          "name": "account",
+          "type": "belongsTo",
+          "sourceModel": "FinPaymentIntent",
+          "sourceField": "accountId",
+          "targetModel": "CrmAccount",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "FinPaymentIntent account foreign key link to CrmAccount."
+        },
+        {
+          "name": "supplier",
+          "type": "belongsTo",
+          "sourceModel": "FinPaymentIntent",
+          "sourceField": "supplierId",
+          "targetModel": "OpsSupplierProfile",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "FinPaymentIntent supplier foreign key link to OpsSupplierProfile."
+        }
+      ]
+    },
+    {
+      "name": "HrEmployee",
+      "title": "Employee",
+      "description": "Core profile representing an individual worker within the organization.",
+      "domainName": "Rapider HR & Talent Suite",
+      "domainKey": "HR",
+      "datatableName": "HrEmployee",
+      "dataTableName": "HrEmployee",
+      "sqlTableName": "hr_employee",
+      "isolationScope": "ENTERPRISE_SHARED_WITH_CONFIDENTIAL_VAULTS",
+      "titleFieldTemplate": "{{ firstName }} {{ lastName }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "firstName",
+          "lastName",
+          "email",
+          "jobTitle",
+          "employeeNumber"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "firstName",
+            "lastName",
+            "email",
+            "status"
+          ],
+          "immutableFields": [],
+          "requiredRelations": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "Ensure the email address is formatted correctly. If a department is mentioned, link the employee to the correct departmentId.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "If status is 'Active', a hireDate must be provided or assumed as today."
+        },
+        "entityItemUpdate": {
+          "immutableFields": [],
+          "autoGenerateFields": [],
+          "additionalPrompt": "When updating manager or department, suggest creating a Lifecycle Event.",
+          "requireUserConfirmation": true,
+          "customValidationPrompt": "Ensure the employee is not set as their own manager.",
+          "restrictedStates": [
+            {
+              "description": "Cannot update terminated employees without authorization.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 50,
+          "defaultContextLimit": 100,
+          "hiddenFields": [
+            "ssn"
+          ],
+          "maskedFields": [
+            "personalEmail",
+            "phone"
+          ],
+          "additionalPrompt": "Always show job title, department, and status."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [
+            "lifecycleEvents",
+            "documents",
+            "emergencyContacts"
+          ],
+          "restrictedStates": [
+            {
+              "description": "Active employees must be terminated before deletion.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "employeeNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "firstName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lastName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preferredName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "personalEmail",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobTitle",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "workerType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "employmentType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "hireDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "departmentId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "managerId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "positionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "jobProfileId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locationId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "legalEntityId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "weeklyHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timeZone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "avatarColor",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "department",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "departmentId",
+          "targetModel": "HrDepartment",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Department this employee belongs to."
+        },
+        {
+          "name": "manager",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "managerId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Manager this employee reports to."
+        },
+        {
+          "name": "position",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "positionId",
+          "targetModel": "HrPosition",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Specific position this employee holds."
+        },
+        {
+          "name": "jobProfile",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "jobProfileId",
+          "targetModel": "HrJobProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Job profile associated with this employee."
+        },
+        {
+          "name": "location",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "locationId",
+          "targetModel": "HrLocation",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Work location of this employee."
+        },
+        {
+          "name": "legalEntity",
+          "type": "belongsTo",
+          "sourceModel": "HrEmployee",
+          "sourceField": "legalEntityId",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "Legal entity employing this person."
+        },
+        {
+          "name": "lifecycleEvents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrLifecycleEvent",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Lifecycle events for this employee."
+        },
+        {
+          "name": "changeRequests",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrChangeRequest",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Pending and past change requests for this employee."
+        },
+        {
+          "name": "documents",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrDocumentRef",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Uploaded compliance and employment documents."
+        },
+        {
+          "name": "emergencyContacts",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmergencyContact",
+          "targetField": "employeeId",
+          "throughModel": null,
+          "description": "Emergency contacts."
+        },
+        {
+          "name": "directReports",
+          "type": "hasMany",
+          "sourceModel": "HrEmployee",
+          "sourceField": "id",
+          "targetModel": "HrEmployee",
+          "targetField": "managerId",
+          "throughModel": null,
+          "description": "Direct reports who report to this manager."
+        }
+      ]
+    },
+    {
+      "name": "MktEmailMessage",
+      "title": "Email Message",
+      "description": "Email composition specification, sender metadata, subject, templates, and delivery settings.",
+      "domainName": "Rapider Marketing Suite",
+      "domainKey": "MKT",
+      "datatableName": "MktEmailMessage",
+      "dataTableName": "MktEmailMessage",
+      "sqlTableName": "mkt_email_message",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Email Message, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "purpose",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "fromName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "fromAddress",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "replyTo",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "subject",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "preheader",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "htmlAssetVersionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "textContentRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "audienceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "suppressionIds",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "campaignId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timezone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "providerConnectionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "trackingPolicy",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "sends",
+          "type": "hasMany",
+          "sourceModel": "MktEmailMessage",
+          "sourceField": "id",
+          "targetModel": "MktEmailSend",
+          "targetField": "emailMessageId",
+          "throughModel": null,
+          "description": "MktEmailMessage relation to MktEmailSend."
+        },
+        {
+          "name": "variants",
+          "type": "hasMany",
+          "sourceModel": "MktEmailMessage",
+          "sourceField": "id",
+          "targetModel": "MktEmailVariant",
+          "targetField": "emailMessageId",
+          "throughModel": null,
+          "description": "MktEmailMessage relation to MktEmailVariant."
+        }
+      ]
+    },
+    {
+      "name": "MktEvent",
+      "title": "Marketing Event",
+      "description": "In-person, virtual, or hybrid event operations, capacity constraints, venue links, and scheduling.",
+      "domainName": "Rapider Marketing Suite",
+      "domainKey": "MKT",
+      "datatableName": "MktEvent",
+      "dataTableName": "MktEvent",
+      "sqlTableName": "mkt_event",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Marketing Event, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timezone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "venueId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "virtualProviderRef",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "capacity",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "registrationOpenAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "registrationCloseAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "campaignId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerUserId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "sessions",
+          "type": "hasMany",
+          "sourceModel": "MktEvent",
+          "sourceField": "id",
+          "targetModel": "MktEventSession",
+          "targetField": "eventId",
+          "throughModel": null,
+          "description": "MktEvent relation to MktEventSession."
+        },
+        {
+          "name": "registrations",
+          "type": "hasMany",
+          "sourceModel": "MktEvent",
+          "sourceField": "id",
+          "targetModel": "MktEventRegistration",
+          "targetField": "eventId",
+          "throughModel": null,
+          "description": "MktEvent relation to MktEventRegistration."
+        },
+        {
+          "name": "attendance",
+          "type": "hasMany",
+          "sourceModel": "MktEvent",
+          "sourceField": "id",
+          "targetModel": "MktEventAttendance",
+          "targetField": "eventId",
+          "throughModel": null,
+          "description": "MktEvent relation to MktEventAttendance."
+        }
+      ]
+    },
+    {
+      "name": "MktSmsMessage",
+      "title": "SMS Message",
+      "description": "Text message copy, character encoding, estimated segment count, and regulatory consent checks.",
+      "domainName": "Rapider Marketing Suite",
+      "domainKey": "MKT",
+      "datatableName": "MktSmsMessage",
+      "dataTableName": "MktSmsMessage",
+      "sqlTableName": "mkt_sms_message",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating SMS Message, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "purpose",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "body",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locale",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "audienceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "consentPurpose",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "campaignId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "providerConnectionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "senderId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "shortLinkPolicy",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "timezone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "encoding",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "estimatedSegments",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "batches",
+          "type": "hasMany",
+          "sourceModel": "MktSmsMessage",
+          "sourceField": "id",
+          "targetModel": "MktSmsBatch",
+          "targetField": "smsMessageId",
+          "throughModel": null,
+          "description": "MktSmsMessage relation to MktSmsBatch."
+        }
+      ]
+    },
+    {
+      "name": "MktSurvey",
+      "title": "Survey",
+      "description": "Customer satisfaction survey result.",
+      "domainName": "Rapider Marketing Suite",
+      "domainKey": "MKT",
+      "datatableName": "MktSurvey",
+      "dataTableName": "MktSurvey",
+      "sqlTableName": "mkt_survey",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ rating }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Survey, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "purpose",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "schemaVersionId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "audienceId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "channel",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "campaignId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "anonymousMode",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "openAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "closeAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "responseLimit",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "locale",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "OpsMaintenanceWorkOrder",
+      "title": "Maintenance Work Order",
+      "description": "Corrective or preventive work order dispatching technicians, safety procedures, and spare parts.",
+      "domainName": "Rapider Operations Suite",
+      "domainKey": "OPS",
+      "datatableName": "OpsMaintenanceWorkOrder",
+      "dataTableName": "OpsMaintenanceWorkOrder",
+      "sqlTableName": "ops_maintenance_work_order",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Maintenance Work Order, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "workOrderNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assignedTechnicianId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "maintenancePlanId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "OpsMaintenancePlan",
+          "referenceField": "id"
+        },
+        {
+          "name": "facilityLocationId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "HrLocation",
+          "referenceField": "id"
+        },
+        {
+          "name": "productionOrderId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "MfgOrder",
+          "referenceField": "id"
+        },
+        {
+          "name": "downtimeId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "OpsAssetDowntime",
+          "referenceField": "id"
+        },
+        {
+          "name": "safetyLockoutVerified",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "actualLaborHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "actualPartsCost",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "orderNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledStart",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "completedAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "createdAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "asset",
+          "type": "belongsTo",
+          "sourceModel": "OpsMaintenanceWorkOrder",
+          "sourceField": "assetId",
+          "targetModel": "OpsOperationsAsset",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "OpsMaintenanceWorkOrder asset foreign key link to OpsOperationsAsset."
+        },
+        {
+          "name": "maintenancePlan",
+          "type": "belongsTo",
+          "sourceModel": "OpsMaintenanceWorkOrder",
+          "sourceField": "maintenancePlanId",
+          "targetModel": "OpsMaintenancePlan",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "OpsMaintenanceWorkOrder maintenancePlan foreign key link to OpsMaintenancePlan."
+        },
+        {
+          "name": "assignedTechnician",
+          "type": "belongsTo",
+          "sourceModel": "OpsMaintenanceWorkOrder",
+          "sourceField": "assignedTechnicianId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "OpsMaintenanceWorkOrder assignedTechnician foreign key link to HrEmployee."
+        },
+        {
+          "name": "productionOrder",
+          "type": "belongsTo",
+          "sourceModel": "OpsMaintenanceWorkOrder",
+          "sourceField": "productionOrderId",
+          "targetModel": "MfgOrder",
+          "targetField": "id?",
+          "throughModel": null,
+          "description": "OpsMaintenanceWorkOrder productionOrder foreign key link to MfgOrder."
+        }
+      ]
+    },
+    {
+      "name": "ReaCommercialLease",
+      "title": "Commercial Lease",
+      "description": "Cannot transition `DRAFT_ABSTRACT -> ACTIVE` without approved Home `WorkItem` sign-off; blocks automatic AP rent voucher emission past `expirationDate` unless explicitly placed into `HOLDOVER`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaCommercialLease",
+      "dataTableName": "ReaCommercialLease",
+      "sqlTableName": "rea_commercial_lease",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ title }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "title"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Commercial Lease, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "leaseNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "partyRole",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetCategory",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "leaseStructure",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "commencementDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rentCommencementDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "expirationDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rentableSqFt",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "proRataSharePct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "tiaAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "initialDirectCosts",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "abstractedClauses",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "paymentSteps",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "legalEntityRef",
+          "type": "belongsTo",
+          "sourceModel": "ReaCommercialLease",
+          "sourceField": "legalEntityRef",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaCommercialLease legalEntityRef foreign key link to FinLegalEntity."
+        }
+      ]
+    },
+    {
+      "name": "ReaProperty",
+      "title": "Property",
+      "description": "`managementFeePct` in `[0, 100]`; `escrowGlAccountRef` must be distinct from `operatingGlAccountRef` when statutory deposit segregation is enabled.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaProperty",
+      "dataTableName": "ReaProperty",
+      "sqlTableName": "rea_property",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name",
+          "code"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Property, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "code",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assetClass",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "address",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "totalUnits",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "grossAreaSqFt",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "managementFeePct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "reserveHoldbackAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "legalEntityRef",
+          "type": "belongsTo",
+          "sourceModel": "ReaProperty",
+          "sourceField": "legalEntityRef",
+          "targetModel": "FinLegalEntity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaProperty legalEntityRef foreign key link to FinLegalEntity."
+        }
+      ]
+    },
+    {
+      "name": "ReaTenancyLease",
+      "title": "Tenancy Lease",
+      "description": "Executed (`ACTIVE`/`TERMINATED`) lease terms are immutable except via auditable renewal/addendum commands; `endDate >= startDate` for `FIXED_TERM`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaTenancyLease",
+      "dataTableName": "ReaTenancyLease",
+      "sqlTableName": "rea_tenancy_lease",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Tenancy Lease, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "leaseCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "leaseType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moveInDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moveOutDate",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "baseRent",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "gracePeriodDays",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "lateFeeRule",
+          "type": "object",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "delinquencyHold",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaTenancyLease",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaTenancyLease property foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaUnit",
+      "title": "Unit",
+      "description": "Unique `(propertyId, unitNumber)`; at most one `ACTIVE` full-unit `ReaTenancyLease` at a time (unless `leaseMode = BY_BED`).",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaUnit",
+      "dataTableName": "ReaUnit",
+      "sqlTableName": "rea_unit",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Unit, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "unitNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "buildingName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "floor",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bedrooms",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bathrooms",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "rentableAreaSqFt",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "marketRent",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "occupancyStatus",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "amenities",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaUnit",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaUnit property foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaVisitorVisit",
+      "title": "Visitor Visit",
+      "description": "Cannot transition to `CHECKED_IN` if `status == SECURITY_HOLD` (until cleared via Security `WorkItem`) or if required `ReaVisitorAgreementSignature` is unsigned; once `piiAnonymizedAt` is set, PII fields are irreversibly scrubbed to `[REDACTED-GDPR]`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaVisitorVisit",
+      "dataTableName": "ReaVisitorVisit",
+      "sqlTableName": "rea_visitor_visit",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Visitor Visit, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "visitCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "visitorCategory",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "visitorFullName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "visitorEmail",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "visitorPhone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "visitorCompany",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "discreetCandidateMode",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "expectedArrivalAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "expectedDepartureAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "checkedInAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "checkedOutAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "hostAckStatus",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "piiAnonymizedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "lobby",
+          "type": "belongsTo",
+          "sourceModel": "ReaVisitorVisit",
+          "sourceField": "lobbyId",
+          "targetModel": "ReaReceptionLobby",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaVisitorVisit lobby foreign key link to ReaReceptionLobby."
+        }
+      ]
+    },
+    {
+      "name": "SupTicket",
+      "title": "Case",
+      "description": "Represents a customer support issue or ticket.",
+      "domainName": "Rapider Customer Support Suite",
+      "domainKey": "SUP",
+      "datatableName": "SupTicket",
+      "dataTableName": "SupTicket",
+      "sqlTableName": "sup_ticket",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ subject }} - {{ status }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "subject",
+          "description"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "subject",
+            "accountId"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "status",
+            "priority"
+          ],
+          "additionalPrompt": "Set priority to High if words like 'urgent' or 'critical' are used.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "accountId"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": [
+            {
+              "description": "Cannot modify closed cases.",
+              "where": {}
+            }
+          ]
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [],
+          "maskedFields": [],
+          "additionalPrompt": "Always list critical cases first."
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": [
+            {
+              "description": "Cannot delete resolved cases.",
+              "where": {}
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "accountId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "subject",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ticketNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "channel",
+          "type": "string",
+          "description": "Allowed values: PORTAL, EMAIL, CHAT, VOICE, FIELD_SERVICE, SOCIAL, API",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "enumValues": [
+            "PORTAL",
+            "EMAIL",
+            "CHAT",
+            "VOICE",
+            "FIELD_SERVICE",
+            "SOCIAL",
+            "API"
+          ],
+          "options": [
+            "PORTAL",
+            "EMAIL",
+            "CHAT",
+            "VOICE",
+            "FIELD_SERVICE",
+            "SOCIAL",
+            "API"
+          ]
+        },
+        {
+          "name": "queueId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "SupQueue",
+          "referenceField": "id"
+        },
+        {
+          "name": "assetId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "referenceModel": "OpsOperationsAsset",
+          "referenceField": "id"
+        },
+        {
+          "name": "firstResponseDueAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "resolutionDueAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "csatScore",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "assigneeId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "slaPolicyId",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "account",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "accountId",
+          "targetModel": "CrmAccount",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The account this case is associated with."
+        },
+        {
+          "name": "contact",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "contactId",
+          "targetModel": "CrmContact",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "The individual contact associated with this case."
+        },
+        {
+          "name": "queue",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "queueId",
+          "targetModel": "SupQueue",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "SupTicket queue foreign key link to SupQueue."
+        },
+        {
+          "name": "assigneeEmployee",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "assigneeEmployeeId",
+          "targetModel": "HrEmployee",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "SupTicket assigneeEmployee foreign key link to HrEmployee."
+        },
+        {
+          "name": "slaPolicy",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "slaPolicyId",
+          "targetModel": "SupSlaPolicy",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "SupTicket slaPolicy foreign key link to SupSlaPolicy."
+        },
+        {
+          "name": "asset",
+          "type": "belongsTo",
+          "sourceModel": "SupTicket",
+          "sourceField": "assetId",
+          "targetModel": "OpsOperationsAsset",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "SupTicket asset foreign key link to OpsOperationsAsset."
+        }
+      ]
+    },
+    {
+      "name": "ReaTenantMemberProfile",
+      "title": "Tenant Member Profile",
+      "description": "Strictly isolated by `(propertyId, tenantAccountRef)` for `TENANT_COMPANY_ADMIN`; transitioning to `OFFBOARDED` atomically revokes all active `ReaBuildingAccessPass` credentials.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaTenantMemberProfile",
+      "dataTableName": "ReaTenantMemberProfile",
+      "sqlTableName": "rea_tenant_member_profile",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Tenant Member Profile, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "memberRole",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "canAuthorizeBillableCharges",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "monthlyAmenityCreditsRemaining",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "signedWaiverTypes",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": []
+    },
+    {
+      "name": "ReaBuildingAccessPass",
+      "title": "Building Access Pass",
+      "description": "Adding `FITNESS_CENTER` to `allowedZones` requires `\"FITNESS_LIABILITY\"` in `memberProfile.signedWaiverTypes`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaBuildingAccessPass",
+      "dataTableName": "ReaBuildingAccessPass",
+      "sqlTableName": "rea_building_access_pass",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Building Access Pass, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "passCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "passTier",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "allowedPropertyIds",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "allowedZones",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "issuedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "revokedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "memberProfile",
+          "type": "belongsTo",
+          "sourceModel": "ReaBuildingAccessPass",
+          "sourceField": "memberProfileId",
+          "targetModel": "ReaTenantMemberProfile",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaBuildingAccessPass memberProfile foreign key link to ReaTenantMemberProfile."
+        }
+      ]
+    },
+    {
+      "name": "ReaBuildingAmenity",
+      "title": "Building Amenity",
+      "description": "`hourlyRate >= 0` and `cleaningFee >= 0` (`Decimal128`).",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaBuildingAmenity",
+      "dataTableName": "ReaBuildingAmenity",
+      "sqlTableName": "rea_building_amenity",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ name }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "name"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Building Amenity, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "amenityCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "capacity",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "hourlyRate",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cleaningFee",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "setupBufferMinutes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cleanupBufferMinutes",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cancellationCutoffHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requiredWaiverType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "approvalMode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaBuildingAmenity",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaBuildingAmenity property foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaAmenityBooking",
+      "title": "Amenity Booking",
+      "description": "Non-overlapping `[effectiveBlockStartAt, effectiveBlockEndAt)` (`startAt - setupBuffer` to `endAt + cleanupBuffer`) per `amenityId`; when `totalChargeAmount > \\$0.00` on a commercial account, requires `memberProfile.canAuthorizeBillableCharges == true`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaAmenityBooking",
+      "dataTableName": "ReaAmenityBooking",
+      "sqlTableName": "rea_amenity_booking",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Amenity Booking, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "bookingCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "startAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "endAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "effectiveBlockStartAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "effectiveBlockEndAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "attendeeCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "freeCreditsAppliedHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "billableOverageAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "cleaningFeeAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "totalChargeAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "amenity",
+          "type": "belongsTo",
+          "sourceModel": "ReaAmenityBooking",
+          "sourceField": "amenityId",
+          "targetModel": "ReaBuildingAmenity",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaAmenityBooking amenity foreign key link to ReaBuildingAmenity."
+        }
+      ]
+    },
+    {
+      "name": "ReaBuildingServiceRequest",
+      "title": "Building Service Request",
+      "description": "`FREIGHT_ELEVATOR` requests cannot transition to `ROUTED_IN_PROGRESS` until `vendorCoiVerified == true` via Property Manager `WorkItem`; `OVERTIME_HVAC` requires `canAuthorizeBillableCharges == true`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaBuildingServiceRequest",
+      "dataTableName": "ReaBuildingServiceRequest",
+      "sqlTableName": "rea_building_service_request",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Building Service Request, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "requestNumber",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "requestType",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledStartAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "scheduledEndAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "overtimeHvacHours",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "overtimeBillableAmount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "vendorCoiVerified",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "csatRating",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaBuildingServiceRequest",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaBuildingServiceRequest property foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaBuildingAnnouncement",
+      "title": "Building Announcement",
+      "description": "Strictly filters feed visibility so tenant `A` never sees suite-specific advisories targeted exclusively to `targetTenantAccountRefs = [Tenant B]`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaBuildingAnnouncement",
+      "dataTableName": "ReaBuildingAnnouncement",
+      "sqlTableName": "rea_building_announcement",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Building Announcement, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "headline",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "bodyMarkdown",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "urgency",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "targetFloorCodes",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "targetTenantAccountRefs",
+          "type": "array",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": true
+        },
+        {
+          "name": "suiteAdminsOnly",
+          "type": "boolean",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "expiresAt",
+          "type": "datetime",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "readCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaBuildingAnnouncement",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaBuildingAnnouncement property foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaBuildingPerkOffer",
+      "title": "Building Perk Offer",
+      "description": "Tracks anonymized per-offer redemptions without exposing individual occupant names to external retail merchants.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaBuildingPerkOffer",
+      "dataTableName": "ReaBuildingPerkOffer",
+      "sqlTableName": "rea_building_perk_offer",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Building Perk Offer, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "merchantName",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "offerTitle",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "discountSummary",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "promoCode",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "validFrom",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "validTo",
+          "type": "date",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "redemptionCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "propertyIds[]",
+          "type": "belongsTo",
+          "sourceModel": "ReaBuildingPerkOffer",
+          "sourceField": "propertyIds[]",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaBuildingPerkOffer propertyIds[] foreign key link to ReaProperty."
+        }
+      ]
+    },
+    {
+      "name": "ReaTenantHealthScorecard",
+      "title": "Tenant Health Scorecard",
+      "description": "Auto-opens a Landlord Retention `WorkItem` when `riskBand == AT_RISK && monthsToLeaseExpiry <= 12`.",
+      "domainName": "Rapider Real Estate Suite",
+      "domainKey": "REA",
+      "datatableName": "ReaTenantHealthScorecard",
+      "dataTableName": "ReaTenantHealthScorecard",
+      "sqlTableName": "rea_tenant_health_scorecard",
+      "isolationScope": "ENTERPRISE_SHARED",
+      "titleFieldTemplate": "{{ id }}",
+      "scope": {
+        "where": {}
+      },
+      "aiAgentConfig": {
+        "vectorSearchFields": [
+          "id"
+        ],
+        "planning": {
+          "availableOperations": [
+            "create",
+            "update",
+            "read",
+            "delete"
+          ]
+        },
+        "entityItemCreate": {
+          "requiredFields": [
+            "id"
+          ],
+          "immutableFields": [
+            "isDeleted"
+          ],
+          "requiredRelations": [],
+          "autoGenerateFields": [
+            "id"
+          ],
+          "additionalPrompt": "When creating Tenant Health Scorecard, ensure required attributes are populated.",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": ""
+        },
+        "entityItemUpdate": {
+          "immutableFields": [
+            "id"
+          ],
+          "autoGenerateFields": [],
+          "additionalPrompt": "",
+          "requireUserConfirmation": false,
+          "customValidationPrompt": "",
+          "restrictedStates": []
+        },
+        "entityRead": {
+          "defaultPageSize": 20,
+          "defaultContextLimit": 30,
+          "hiddenFields": [
+            "isDeleted"
+          ],
+          "maskedFields": [],
+          "additionalPrompt": ""
+        },
+        "entityItemDelete": {
+          "requireCaptchaConfirmation": true,
+          "cascadingRelations": [],
+          "restrictedStates": []
+        }
+      },
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Primary key UUID.",
+          "isPrimaryKey": true,
+          "isRequired": true,
+          "isHidden": false,
+          "isArray": false,
+          "defaultFn": "uuidv4"
+        },
+        {
+          "name": "periodKey",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "activeMemberAdoptionPct",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "avgServiceCsat",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "slaBreachCount",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "amenityEventEngagementScore",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "latestNpsScore",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "compositeHealthScore",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "riskBand",
+          "type": "string",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "monthsToLeaseExpiry",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "version",
+          "type": "number",
+          "description": "",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "Lifecycle or record status.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "isDeleted",
+          "type": "boolean",
+          "description": "Soft deletion flag.",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false,
+          "default": false
+        }
+      ],
+      "relations": [
+        {
+          "name": "property",
+          "type": "belongsTo",
+          "sourceModel": "ReaTenantHealthScorecard",
+          "sourceField": "propertyId",
+          "targetModel": "ReaProperty",
+          "targetField": "id",
+          "throughModel": null,
+          "description": "ReaTenantHealthScorecard property foreign key link to ReaProperty."
+        }
+      ]
+    }
+  ],
   "variables": [],
   "tools": [],
   "workflows": [],
