@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapider Tenant Engagement &amp; Building Experience</title>
+  <script src="https://kit.fontawesome.com/5b23df26dc.js" crossorigin="anonymous" defer></script>
+  <script src="/assets/js/rapider-components.js" defer></script>
+  <link rel="stylesheet" href="/assets/themes/rapider-tailwind-theme.css">
+  <link rel="stylesheet" href="/assets/themes/crm-expenses-design.css">
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; }
+    iframe#appFrame { width: 100%; height: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="appFrame" src="pages/building-experience-feed/building-experience-feed.html"></iframe>
+  <script>
+    const routes = {
+  "building-experience-feed": "pages/building-experience-feed/building-experience-feed.html",
+  "events-community": "pages/events-community/events-community.html",
+  "perks-building-guide": "pages/perks-building-guide/perks-building-guide.html",
+  "shared-amenities": "pages/shared-amenities/shared-amenities.html",
+  "service-hvac-requests": "pages/service-hvac-requests/service-hvac-requests.html",
+  "freight-dock-schedule": "pages/freight-dock-schedule/freight-dock-schedule.html",
+  "tenant-roster-passes": "pages/tenant-roster-passes/tenant-roster-passes.html",
+  "tenant-health-retention": "pages/tenant-health-retention/tenant-health-retention.html",
+  "announcements-studio": "pages/announcements-studio/announcements-studio.html",
+  "tenant-account-detail": "pages/tenant-account-detail/tenant-account-detail.html",
+  "amenity-booking-detail": "pages/amenity-booking-detail/amenity-booking-detail.html",
+  "request-amenity-drawer": "pages/request-amenity-drawer/request-amenity-drawer.html"
+};
+    function handleHash() {
+      const hash = window.location.hash.replace(/^#\/?/, '').split('?')[0];
+      const route = hash || 'building-experience-feed';
+      const target = routes[route] || routes['building-experience-feed'];
+      const iframe = document.getElementById('appFrame');
+      if (iframe) iframe.src = target;
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('load', handleHash);
+  </script>
+</body>
+</html>

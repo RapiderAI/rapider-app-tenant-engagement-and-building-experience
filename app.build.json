@@ -1,0 +1,594 @@
+{
+  "$schema": "./app.build.schema.json",
+  "appKey": "tenant-engagement-and-building-experience",
+  "appName": "Rapider Tenant Engagement & Building Experience",
+  "repository": "",
+  "version": "1.0.0",
+  "lastBuildTimestamp": "2026-11-01T12:05:22.019Z",
+  "lastCommit": "5d57dc4",
+  "summary": {
+    "status": "qa_passed",
+    "complianceRate": 100,
+    "totalPages": 12,
+    "passedPages": 12,
+    "failedPages": 0,
+    "stalePages": 0,
+    "totalQaPasses": 20,
+    "completedQaPasses": 20,
+    "failedQaPasses": 0,
+    "e2eSuitesCount": 0,
+    "e2ePassedCount": 0,
+    "lastFullAudit": "2026-11-01T12:05:22.019Z",
+    "lastE2ERun": null
+  },
+  "qaPasses": {
+    "pass-01-routing": {
+      "name": "pass-01-routing",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-02-swr": {
+      "name": "pass-02-swr",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-03-data-models": {
+      "name": "pass-03-data-models",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-04-modals": {
+      "name": "pass-04-modals",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-05-drawers": {
+      "name": "pass-05-drawers",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-06-responsive": {
+      "name": "pass-06-responsive",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-07-themes": {
+      "name": "pass-07-themes",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-08-notifications": {
+      "name": "pass-08-notifications",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-09-payloads": {
+      "name": "pass-09-payloads",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-10-components": {
+      "name": "pass-10-components",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-11-e2e-expectations": {
+      "name": "pass-11-e2e-expectations",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-12-asset-externalization": {
+      "name": "pass-12-asset-externalization",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-13-manifest-sync": {
+      "name": "pass-13-manifest-sync",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-14-ui-states": {
+      "name": "pass-14-ui-states",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-15-security": {
+      "name": "pass-15-security",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-16-accessibility": {
+      "name": "pass-16-accessibility",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-17-input-formatting": {
+      "name": "pass-17-input-formatting",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-18-kanban-list-views": {
+      "name": "pass-18-kanban-list-views",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-19-ui-best-practices": {
+      "name": "pass-19-ui-best-practices",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    },
+    "pass-20-search-filters": {
+      "name": "pass-20-search-filters",
+      "status": "passed",
+      "lastRun": "2026-11-01T12:05:22.019Z",
+      "pagesCovered": 12,
+      "issuesFound": 0
+    }
+  },
+  "pages": {
+    "pages/building-experience-feed/building-experience-feed.html": {
+      "pageName": "Building Hub & Live Feed",
+      "route": "building-experience-feed",
+      "fileHash": "sha256:0c36c5bf091fd6c098cc5d6434f185789bb99a8f868425f3ed42edc478f244fd",
+      "lastModified": "2026-11-01T12:05:21.899Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/events-community/events-community.html": {
+      "pageName": "Community Events & Polls",
+      "route": "events-community",
+      "fileHash": "sha256:b37b41e55dfc618f11bc591839043a6d2a79c9b23afbc6369779e2b010f21aa9",
+      "lastModified": "2026-11-01T12:05:21.899Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/perks-building-guide/perks-building-guide.html": {
+      "pageName": "Local Perks & Building Guide",
+      "route": "perks-building-guide",
+      "fileHash": "sha256:8ee2140d2295c8d5f8d2329aa459d589255bf72efc86a10db674a527d9fa0451",
+      "lastModified": "2026-11-01T12:05:21.900Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/shared-amenities/shared-amenities.html": {
+      "pageName": "Shared Amenities & Bookings",
+      "route": "shared-amenities",
+      "fileHash": "sha256:e15fb9478d1c82ce49cf31616f60593fb3f2cdf3717ceabdc5d497d7a49822d2",
+      "lastModified": "2026-11-01T12:05:21.900Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/service-hvac-requests/service-hvac-requests.html": {
+      "pageName": "Suite Service & Overtime HVAC",
+      "route": "service-hvac-requests",
+      "fileHash": "sha256:425b4ff712e620f94fab599c4e81c982a7414eb375fb64b0c10aa3fedf5e7f15",
+      "lastModified": "2026-11-01T12:05:21.901Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/freight-dock-schedule/freight-dock-schedule.html": {
+      "pageName": "Freight Elevator & Dock Slots",
+      "route": "freight-dock-schedule",
+      "fileHash": "sha256:5d6a6203ea158c618a1a5bd7dc605f77a4d2b60c7776fe3c0d53df3cbadd96e5",
+      "lastModified": "2026-11-01T12:05:21.901Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/tenant-roster-passes/tenant-roster-passes.html": {
+      "pageName": "Tenant Roster & Mobile Passes",
+      "route": "tenant-roster-passes",
+      "fileHash": "sha256:1aa6c7a458efc983db8401a252777d7b79c2d0d96aaa8fb654accf03dce00d74",
+      "lastModified": "2026-11-01T12:05:21.901Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/tenant-health-retention/tenant-health-retention.html": {
+      "pageName": "Tenant Health & Renewal Risk",
+      "route": "tenant-health-retention",
+      "fileHash": "sha256:e9e8255e50da98ae74e1ba4a88396b7e01ccf9def18a634660a8d5b87c492542",
+      "lastModified": "2026-11-01T12:05:21.902Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/announcements-studio/announcements-studio.html": {
+      "pageName": "Targeted Broadcasts Studio",
+      "route": "announcements-studio",
+      "fileHash": "sha256:87e13b9c5c65652620ae04a78acb2921d409e771480566f1b32c9e79b50bf987",
+      "lastModified": "2026-11-01T12:05:21.902Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 8,
+        "buttonsWithActions": 8,
+        "deadButtons": 0,
+        "linksTotal": 12,
+        "linksValid": 12,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 2,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/tenant-account-detail/tenant-account-detail.html": {
+      "pageName": "Tenant Company Experience 360",
+      "route": "tenant-account-detail",
+      "fileHash": "sha256:7adb1524c74e97eb38cec5b0bd806ff1c3f94f0a96dce3cc73e94e5fa9f05b6e",
+      "lastModified": "2026-11-01T12:05:21.904Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 9,
+        "buttonsWithActions": 9,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 0,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/amenity-booking-detail/amenity-booking-detail.html": {
+      "pageName": "Amenity Booking & Waiver 360",
+      "route": "amenity-booking-detail",
+      "fileHash": "sha256:92f8b0e65c367a08faa3c0a6bd720bedae0b3652cbbc8a09a31ace37638b6e49",
+      "lastModified": "2026-11-01T12:05:21.904Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 9,
+        "buttonsWithActions": 9,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 0,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    },
+    "pages/request-amenity-drawer/request-amenity-drawer.html": {
+      "pageName": "Booking / HVAC / Member Drawer",
+      "route": "request-amenity-drawer",
+      "fileHash": "sha256:cccc38068a9f806172e2b57a541f6165e284a2639cb910d1a35651382b0fedc8",
+      "lastModified": "2026-11-01T12:05:21.905Z",
+      "lastTested": "2026-11-01T12:05:22.019Z",
+      "status": "passed",
+      "metrics": {
+        "buttonsTotal": 7,
+        "buttonsWithActions": 7,
+        "deadButtons": 0,
+        "linksTotal": 14,
+        "linksValid": 14,
+        "nativeAlerts": 0,
+        "contrastCompliant": true,
+        "swrCalls": 1,
+        "modalsTotal": 1
+      },
+      "issues": [],
+      "warnings": [
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_LIGHT_BACKGROUND",
+          "message": "Container has \"bg-white\" without a corresponding \"dark:bg-*\" variant class (sidebar w-64 bg-white border-r border-slate-200 fl).",
+          "snippet": "<div class=\"sidebar w-64 bg-white border-r border-slate-200 flex flex-col justify-between shrink-0 transition-all duration-300 z-30 select-none\">"
+        },
+        {
+          "rule": "Pass 11: Dark & Light Theme Compliance",
+          "type": "HARDCODED_DARK_TEXT",
+          "message": "Text has hardcoded dark color without a corresponding \"dark:text-*\" variant (bg-slate-50 text-slate-900 font-sans antialiased m).",
+          "snippet": "<div class=\"bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex\">"
+        }
+      ]
+    }
+  },
+  "e2eSuites": {
+    "expectationsFile": "e2e/expectations.json",
+    "lastRun": null,
+    "status": "not_run",
+    "suites": []
+  },
+  "history": [
+    {
+      "timestamp": "2026-11-01T12:05:22.019Z",
+      "action": "qa_full_audit",
+      "commit": "5d57dc4",
+      "complianceRate": 100,
+      "pagesAudited": 12,
+      "status": "passed",
+      "agent": "Antigravity",
+      "details": "12/12 pages passed. Completed 20/20 QA passes."
+    }
+  ]
+}
