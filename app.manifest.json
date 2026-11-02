@@ -1,169 +1,29 @@
 {
-  "pages": [
-    {
-      "name": "Building Hub & Live Feed",
-      "route": "building-experience-feed",
-      "htmlFilePath": "pages/building-experience-feed/building-experience-feed.html",
-      "title": "Building Hub & Live Feed",
-      "group": "Community & Experience",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 1,
-      "developmentDetails": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar."
-    },
-    {
-      "name": "Community Events & Polls",
-      "route": "events-community",
-      "htmlFilePath": "pages/events-community/events-community.html",
-      "title": "Community Events & Polls",
-      "group": "Community & Experience",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 2,
-      "developmentDetails": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company."
-    },
-    {
-      "name": "Local Perks & Building Guide",
-      "route": "perks-building-guide",
-      "htmlFilePath": "pages/perks-building-guide/perks-building-guide.html",
-      "title": "Local Perks & Building Guide",
-      "group": "Community & Experience",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 3,
-      "developmentDetails": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info)."
-    },
-    {
-      "name": "Shared Amenities & Bookings",
-      "route": "shared-amenities",
-      "htmlFilePath": "pages/shared-amenities/shared-amenities.html",
-      "title": "Shared Amenities & Bookings",
-      "group": "Amenities & Building Ops",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 4,
-      "developmentDetails": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage \\$, waiver badge, auto-cleanup WO link)."
-    },
-    {
-      "name": "Suite Service & Overtime HVAC",
-      "route": "service-hvac-requests",
-      "htmlFilePath": "pages/service-hvac-requests/service-hvac-requests.html",
-      "title": "Suite Service & Overtime HVAC",
-      "group": "Amenities & Building Ops",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 5,
-      "developmentDetails": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler."
-    },
-    {
-      "name": "Freight Elevator & Dock Slots",
-      "route": "freight-dock-schedule",
-      "htmlFilePath": "pages/freight-dock-schedule/freight-dock-schedule.html",
-      "title": "Freight Elevator & Dock Slots",
-      "group": "Amenities & Building Ops",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 6,
-      "developmentDetails": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge."
-    },
-    {
-      "name": "Tenant Roster & Mobile Passes",
-      "route": "tenant-roster-passes",
-      "htmlFilePath": "pages/tenant-roster-passes/tenant-roster-passes.html",
-      "title": "Tenant Roster & Mobile Passes",
-      "group": "Tenants & Retention",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 7,
-      "developmentDetails": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke."
-    },
-    {
-      "name": "Tenant Health & Renewal Risk",
-      "route": "tenant-health-retention",
-      "htmlFilePath": "pages/tenant-health-retention/tenant-health-retention.html",
-      "title": "Tenant Health & Renewal Risk",
-      "group": "Tenants & Retention",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 8,
-      "developmentDetails": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger."
-    },
-    {
-      "name": "Targeted Broadcasts Studio",
-      "route": "announcements-studio",
-      "htmlFilePath": "pages/announcements-studio/announcements-studio.html",
-      "title": "Targeted Broadcasts Studio",
-      "group": "Tenants & Retention",
-      "icon": "fas fa-building",
-      "displayInMenu": true,
-      "order": 9,
-      "developmentDetails": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper."
-    },
-    {
-      "name": "Tenant Company Experience 360",
-      "route": "tenant-account-detail",
-      "htmlFilePath": "pages/tenant-account-detail/tenant-account-detail.html",
-      "title": "Tenant Company Experience 360",
-      "group": "(Hidden)",
-      "icon": "fas fa-building",
-      "displayInMenu": false,
-      "order": 10,
-      "developmentDetails": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread."
-    },
-    {
-      "name": "Amenity Booking & Waiver 360",
-      "route": "amenity-booking-detail",
-      "htmlFilePath": "pages/amenity-booking-detail/amenity-booking-detail.html",
-      "title": "Amenity Booking & Waiver 360",
-      "group": "(Hidden)",
-      "icon": "fas fa-building",
-      "displayInMenu": false,
-      "order": 11,
-      "developmentDetails": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown."
-    },
-    {
-      "name": "Booking / HVAC / Member Drawer",
-      "route": "request-amenity-drawer",
-      "htmlFilePath": "pages/request-amenity-drawer/request-amenity-drawer.html",
-      "title": "Booking / HVAC / Member Drawer",
-      "group": "(Hidden)",
-      "icon": "fas fa-building",
-      "displayInMenu": false,
-      "order": 12,
-      "developmentDetails": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation."
-    }
-  ],
   "name": "Rapider Tenant Engagement & Building Experience",
   "key": "tenant-engagement-and-building-experience",
-  "route": "tenant-engagement-and-building-experience",
+  "domainKey": "REA",
+  "appSuite": {
+    "key": "REA",
+    "title": "Rapider Real Estate Suite"
+  },
+  "type": "App",
   "description": "Tenant Engagement & Building Experience enterprise microapplication in the Rapider Real Estate Suite.",
+  "isPublic": true,
   "tags": [
     "rea",
     "tenant-engagement-and-building-experience",
     "top-200"
   ],
-  "thumbnailUrl": "",
-  "isPublic": true,
-  "isPaid": false,
-  "price": "Free",
+  "iconUrl": "fas fa-building",
+  "icon": "fas fa-building",
+  "route": "tenant-engagement-and-building-experience",
+  "rating": 5,
+  "reviewCount": 0,
   "status": "app-metadata-completed",
-  "developerName": "Tansel Ozkusaksiz",
-  "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
-  "createdBy": "Tansel Ozkusaksiz",
-  "appIdeaCreatedById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
-  "appSuite": {
-    "key": "REA",
-    "title": "Rapider Real Estate Suite"
-  },
-  "domainKey": "REA",
-  "appIdeaId": "5f836bfa-d6e7-4425-9630-24ce54393e78",
-  "appIdea": {
-    "id": "5f836bfa-d6e7-4425-9630-24ce54393e78",
-    "body": "# #149 Tenant Engagement & Building Experience (`tenant-engagement-and-building-experience`) — Scope of Work (SOW)\n\n- **App Number & Name:** `#149` — Tenant Engagement & Building Experience\n- **App Key:** `tenant-engagement-and-building-experience`\n- **Rapider Suite / Domain Key:** `REA` (Real Estate, Facilities & Construction Suite)\n- **Model Prefix:** `Rea*`\n- **Industry Benchmark Standard:** Benchmarked against leading global enterprise platforms in this category\n- **Industry Benchmark Alignment:** Benchmarked against leading global enterprise platforms to combine fast SME time-to-value with enterprise-scale governance, auditability, and cross-suite automation on Rapider.\n- **Companion Combined Feature Set:** [`../combined-features/149-tenant-engagement-and-building-experience-features.md`](../combined-features/149-tenant-engagement-and-building-experience-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Executive Outcome:**  \n`tenant-engagement-and-building-experience` serves Commercial Office Landlords, Mixed-Use Campus Operators, Class-A Multifamily Communities, and Tenant Suite Administrators as the unified **Digital Front Door and Tenant Retention Platform**. Layered directly over `#141` (`property-management`) and `#145` (`commercial-lease-administration`), it governs delegated tenant-company member rosters (`ReaTenantMemberProfile`) and mobile building passes (`ReaBuildingAccessPass`), shared base-building amenity reservations with lease credit quotas and paid overage billing (`ReaBuildingAmenity`, `ReaAmenityBooking`), tenant operational requests including after-hours overtime HVAC and COI-gated freight-elevator slots (`ReaBuildingServiceRequest`), floor/company-targeted announcements (`ReaBuildingAnnouncement`), ground-floor retail perks (`ReaBuildingPerkOffer`), and account-level Tenant Health & Renewal-Risk scoring (`ReaTenantHealthScorecard`).\n\n**Architectural Distinction from `#146` (`space-planning-and-workplace-utilization`):**  \n`#146` manages a single corporate employer's *internal* hybrid seating, floor restacks, and employee desk hoteling. `#149` is the **multi-tenant landlord-to-transaction & lease lifecycle building experience layer** governing shared base-building amenities across distinct tenant companies (`CrmAccount`s), freight docks, overtime HVAC billing, community events, retail perks, and lease-renewal retention telemetry!\n\n**SME Fast-Path vs. Enterprise Progressive Disclosure:**\n- **SME Fast-Path:** Activate a branded mobile/web Building Hub (`390px`) for a commercial or mixed-use property in minutes, let Tenant Office Managers board meeting intelligence their own suite employees, publish building advisories, enable 1-tap `Too Hot / Too Cold` requests routed straight to `maintenance`, and book shared conference rooms or rooftop lounges.\n- **Enterprise Depth:** Portfolio Passport cross-building lounge access (`enterprise industry standard` / `tenant workplace experience`), lease-clause monthly free-hour credit pools + `\\$125.00/hr` paid overage & `\\$65.00/hr` Saturday overtime HVAC billing (`institutional property accounting` / `Cove` -> `billing`), COI-verified freight-dock scheduling via Home `WorkItem`s, live IAQ/ESG comfort cards (`community & amenity booking`), and REX-style Tenant Health & Churn Risk scorecards alerting Asset Managers 12 months before `#145` lease expirations.\n\n**Target Personas:**\n1. **Property Experience / Community Manager:** Curates `ReaBuildingAnnouncement`s, community `MktEvent`s, local `ReaBuildingPerkOffer`s, approves shared town-hall bookings and freight-dock COIs.\n2. **Tenant Suite / Office Administrator (Scoped Commercial Tenant Role):** Self-manages company `ReaTenantMemberProfile` roster, authorizes overtime HVAC & paid amenity bookings, pre-clears `#147` lobby guests, and tracks suite service tickets.\n3. **Building Occupant / Resident:** Uses `390px` mobile pass, RSVPs to rooftop yoga/networking events, redeems lobby coffee perks, books wellness/fitness slots, and rates completed repair requests.\n4. **Landlord Asset / Leasing Director:** Monitors `ReaTenantHealthScorecard` across expiring `#145` commercial tenants to prevent surprise move-outs.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In Scope\n- `ReaTenantMemberProfile` onboarding, delegated `TENANT_COMPANY_ADMIN` roster self-service, `ReaBuildingAccessPass` mobile/Passport credentials, 1-tap `#147` guest pre-clearance, and Digital Building Guides (`TEB-001`–`TEB-006`).\n- `ReaBuildingAmenity` catalog, `ReaAmenityBooking` (monthly free lease-credit quotas, paid `Decimal128` overage & cleaning fees -> `billing`/`payments`, digital liability waivers, auto-spawned `maintenance` setup/cleaning WOs, cancellation cutoffs) (`TEB-007`–`TEB-012`).\n- `ReaBuildingServiceRequest` intake (comfort/repair -> `maintenance` `MfgMaintenanceWorkOrder`; concierge -> `support` `SupTicket`; after-hours HVAC -> `billing`; freight-elevator/loading-dock COI gates -> `WorkItem`s), IAQ/ESG widgets, and outage push banners (`TEB-013`–`TEB-017`).\n- Segmented `ReaBuildingAnnouncement` broadcasts, `events` (`MktEvent`) community RSVPs, `ReaBuildingPerkOffer` retail redemptions, `surveys` (`MktSurvey`) NPS pulses, `ReaTenantHealthScorecard` retention scoring, and grounded experience AI copilots (`TEB-018`–`TEB-028`).\n\n### Out of Scope\n- Executing technician dispatch, preventive asset maintenance, or spare parts (owned by `maintenance` and `assets`).\n- Lobby kiosk ID scanning, watchlist blocklists, and emergency muster roll calls (owned by `#147` `visitor-and-reception-management`).\n- Underlying lease rent rolls, ASC 842 schedules, and CAM desktop audits (owned by `#141` and `#145`).\n- Payment card tokenization, invoice tax engines, and GL accounting (owned by `billing`, `payments`, and `acc`).\n\n### Suite Ownership & Integration Contract Table\n\n| Domain / App | Owns | Integration Contract with `tenant-engagement-and-building-experience` |\n| :--- | :--- | :--- |\n| **`tenant-engagement-and-building-experience` (`REA`)** | `ReaTenantMemberProfile`, `ReaBuildingAccessPass`, `ReaBuildingAmenity`, `ReaAmenityBooking`, `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, `ReaTenantHealthScorecard` | Governs occupant experience, shared building amenities, freight/overtime-HVAC requests, announcements, perks, and tenant retention health. |\n| **`property-management` (`#141`) & `commercial-lease-admin` (`#145`)** | `ReaProperty`, `ReaUnit`, `ReaTenancyLease`, `ReaCommercialLease` | Supplies building/suite hierarchy, overtime HVAC hourly lease rates, monthly free amenity credits, and lease expiration dates. |\n| **`maintenance` (`MFG`) & `support` (`SUP`)** | `MfgMaintenanceWorkOrder`, `SupTicket` | Executes physical suite/building repair work orders, amenity setup/cleanup WOs, and concierge helpdesk tickets; returns live status updates to `#149`. |\n| **`visitor-and-reception-management` (`#147` — `REA`)** | `ReaVisitorVisit` | Receives 1-tap tenant guest pre-clearances for ground-floor lobby turnstiles. |\n| **`billing` & `payments` (`FIN` — Built)** | `FinInvoice`, `FinPaymentIntent` | Bills commercial tenant accounts or individual occupants for paid amenity overages and after-hours HVAC zone usage. |\n| **`crm`, `events`, `surveys`, `email` & `sms` (`CRM`/`MKT`)** | `CrmAccount`, `CrmContact`, `MktEvent`, `MktSurvey`, `MktEmailMessage`, `MktSmsMessage` | Powers tenant company accounts, community event RSVPs, NPS pulse surveys, and multi-channel building alerts. |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nAll visible sidebar groups strictly satisfy Rapider's **Minimum 3 Items per Section Rule** (`Community & Experience`: 3 items, `Amenities & Building Ops`: 3 items, `Tenants & Retention`: 3 items; 9 visible + 3 hidden detail/drawer routes = 12 total pages).\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX |\n| :---: | :--- | :--- | :--- | :---: | :--- |\n| 1 | `building-experience-feed` | Building Hub & Live Feed | `Community & Experience` | `true` | Outage alert banner, KPI strip (`Active Occupants`, `Amenity Bookings Today`, `Open Suite Requests`, `Portfolio NPS`), `ReaBuildingAnnouncement` feed, IAQ/ESG widget, `#activeFilterTagsBar`. |\n| 2 | `events-community` | Community Events & Polls | `Community & Experience` | `true` | Building `MktEvent` calendar & RSVP capacity cards, `MktSurvey` pulse polls, attendance breakdown by tenant company. |\n| 3 | `perks-building-guide` | Local Perks & Building Guide | `Community & Experience` | `true` | `ReaBuildingPerkOffer` marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info). |\n| 4 | `shared-amenities` | Shared Amenities & Bookings | `Amenities & Building Ops` | `true` | `ReaBuildingAmenity` catalog + `ReaAmenityBooking` timeline/table (`Free Credits Used`, `Paid Overage \\$`, waiver badge, auto-cleanup WO link). |\n| 5 | `service-hvac-requests` | Suite Service & Overtime HVAC | `Amenities & Building Ops` | `true` | `<rapider-kanban>` (`Submitted` -> `Routed to Maintenance/Concierge` -> `In Progress` -> `Completed & Rated`) for `ReaBuildingServiceRequest`s + Overtime HVAC scheduler. |\n| 6 | `freight-dock-schedule` | Freight Elevator & Dock Slots | `Amenities & Building Ops` | `true` | Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home `WorkItem` approval badge. |\n| 7 | `tenant-roster-passes` | Tenant Roster & Mobile Passes | `Tenants & Retention` | `true` | `findSWR` `ReaTenantMemberProfile` & `ReaBuildingAccessPass` directory (`Delegated Suite Admin` self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke. |\n| 8 | `tenant-health-retention` | Tenant Health & Renewal Risk | `Tenants & Retention` | `true` | `ReaTenantHealthScorecard` table across `CrmAccount`s (`Health Score 0–100`, `Adoption %`, `WO CSAT`, `NPS`, `#145 Lease Expiry`, `At-Risk` pill), AI Renewal Brief trigger. |\n| 9 | `announcements-studio` | Targeted Broadcasts Studio | `Tenants & Retention` | `true` | `ReaBuildingAnnouncement` audience segmenter (`Property`, `Floors`, `Tenant Company`, `Suite Admins`), read-receipt % analytics, AI copywriter helper. |\n| 10 | `tenant-account-detail` | Tenant Company Experience 360 | *(Hidden)* | `false` | Deep-link route (`#/tenant-account-detail?id=...`) with `Back` filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and `projectChannelMessage` thread. |\n| 11 | `amenity-booking-detail` | Amenity Booking & Waiver 360 | *(Hidden)* | `false` | Deep-link route (`#/amenity-booking-detail?id=...`) showing signed liability waiver PDF ref, setup/cleanup `MfgMaintenanceWorkOrder`, and `FinInvoice` fee breakdown. |\n| 12 | `request-amenity-drawer` | Booking / HVAC / Member Drawer | *(Hidden)* | `false` | Mobile-ready (`390px`) sliding drawer with `<rapider-phone-input>`, live credit/fee preview, `try...catch...finally` button reset, auto-close, and SWR invalidation. |\n\n---\n\n## 4. Canonical Data Models (`Rea*` — 8 Models)\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`ReaTenantMemberProfile`** | `memberRole` (`TENANT_COMPANY_ADMIN`, `TENANT_OCCUPANT`, `RESIDENT`, `RETAIL_MERCHANT`), `canAuthorizeBillableCharges` (`Boolean`), `monthlyAmenityCreditsRemaining` (`Decimal128`), `signedWaiverTypes` (`String[]`), `phone` (`String`), `status` (`INVITED`, `ACTIVE`, `SUSPENDED`, `OFFBOARDED`), `version` (`Integer`) | `propertyId` -> `ReaProperty` (`#141`), `unitId` -> `ReaUnit` (`#141`), `tenantAccountRef` -> `CrmAccount`, `crmContactRef` -> `CrmContact`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `tenancyLeaseId` -> `ReaTenancyLease` (`#141`, nullable) | Strictly isolated by `(propertyId, tenantAccountRef)` for `TENANT_COMPANY_ADMIN`; transitioning to `OFFBOARDED` atomically revokes all active `ReaBuildingAccessPass` credentials. |\n| **`ReaBuildingAccessPass`** | `passCode` (`String`), `passTier` (`HOME_BUILDING`, `PORTFOLIO_PASSPORT`), `allowedPropertyIds` (`UUID[]`), `allowedZones` (`String[]`: `LOBBY_TURNSTILE`, `SUITE_FLOOR`, `FITNESS_CENTER`, `BIKE_CAGE`), `issuedAt` (`DateTime`), `revokedAt` (`DateTime`), `status` (`ACTIVE`, `SUSPENDED`, `REVOKED`), `version` (`Integer`) | `memberProfileId` -> `ReaTenantMemberProfile`, `homePropertyId` -> `ReaProperty` | Adding `FITNESS_CENTER` to `allowedZones` requires `\"FITNESS_LIABILITY\"` in `memberProfile.signedWaiverTypes`. |\n| **`ReaBuildingAmenity`** | `amenityCode` (`String`), `name` (`String`), `category` (`AUDITORIUM`, `ROOFTOP_TERRACE`, `CONFERENCE_CENTER`, `FITNESS_STUDIO`, `LOUNGE`, `WELLNESS_ROOM`, `FREIGHT_DOCK`), `capacity` (`Integer`), `hourlyRate` (`Decimal128`), `cleaningFee` (`Decimal128`), `setupBufferMinutes` (`Integer`), `cleanupBufferMinutes` (`Integer`), `cancellationCutoffHours` (`Integer`), `requiredWaiverType` (`String`), `approvalMode` (`AUTO_APPROVE`, `MANAGER_APPROVAL`), `status` (`AVAILABLE`, `MAINTENANCE_OUTAGE`), `version` (`Integer`) | `propertyId` -> `ReaProperty` | `hourlyRate >= 0` and `cleaningFee >= 0` (`Decimal128`). |\n| **`ReaAmenityBooking`** | `bookingCode` (`String`), `startAt` (`DateTime`), `endAt` (`DateTime`), `effectiveBlockStartAt` (`DateTime`), `effectiveBlockEndAt` (`DateTime`), `attendeeCount` (`Integer`), `freeCreditsAppliedHours` (`Decimal128`), `billableOverageAmount` (`Decimal128`), `cleaningFeeAmount` (`Decimal128`), `totalChargeAmount` (`Decimal128`), `status` (`PENDING_APPROVAL`, `CONFIRMED`, `CANCELLED`, `COMPLETED`, `NO_SHOW`), `version` (`Integer`) | `amenityId` -> `ReaBuildingAmenity`, `memberProfileId` -> `ReaTenantMemberProfile`, `tenantAccountRef` -> `CrmAccount`, `waiverPdfFileRef` -> Rapider Drive (nullable), `setupWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `approvalWorkItemId` -> Home `WorkItem` (nullable) | Non-overlapping `[effectiveBlockStartAt, effectiveBlockEndAt)` (`startAt - setupBuffer` to `endAt + cleanupBuffer`) per `amenityId`; when `totalChargeAmount > \\$0.00` on a commercial account, requires `memberProfile.canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingServiceRequest`** | `requestNumber` (`String`), `requestType` (`THERMAL_COMFORT`, `REPAIR_CLEANING`, `OVERTIME_HVAC`, `FREIGHT_ELEVATOR`, `CONCIERGE`), `scheduledStartAt` (`DateTime`), `scheduledEndAt` (`DateTime`), `overtimeHvacHours` (`Decimal128`), `overtimeBillableAmount` (`Decimal128`), `vendorCoiVerified` (`Boolean`), `csatRating` (`Integer`, `1..5`), `status` (`SUBMITTED`, `PENDING_COI_APPROVAL`, `ROUTED_IN_PROGRESS`, `COMPLETED`, `CANCELLED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `unitId` -> `ReaUnit`, `requesterMemberId` -> `ReaTenantMemberProfile`, `maintenanceWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `supportTicketRef` -> `SupTicket` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `coiFileRef` -> Rapider Drive (nullable) | `FREIGHT_ELEVATOR` requests cannot transition to `ROUTED_IN_PROGRESS` until `vendorCoiVerified == true` via Property Manager `WorkItem`; `OVERTIME_HVAC` requires `canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingAnnouncement`** | `headline` (`String`), `bodyMarkdown` (`String`), `urgency` (`PINNED_EMERGENCY`, `OPERATIONAL_OUTAGE`, `COMMUNITY_NEWS`), `targetFloorCodes` (`String[]`), `targetTenantAccountRefs` (`UUID[]`), `suiteAdminsOnly` (`Boolean`), `publishedAt` (`DateTime`), `expiresAt` (`DateTime`), `readCount` (`Integer`), `status` (`DRAFT`, `PUBLISHED`, `ARCHIVED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `authorEmployeeRef` -> `HrEmployee` | Strictly filters feed visibility so tenant `A` never sees suite-specific advisories targeted exclusively to `targetTenantAccountRefs = [Tenant B]`. |\n| **`ReaBuildingPerkOffer`** | `merchantName` (`String`), `offerTitle` (`String`), `discountSummary` (`String`), `promoCode` (`String`), `validFrom` (`Date`), `validTo` (`Date`), `redemptionCount` (`Integer`), `status` (`ACTIVE`, `EXPIRED`), `version` (`Integer`) | `propertyIds[]` -> `ReaProperty`, `merchantAccountRef` -> `CrmAccount` (nullable) | Tracks anonymized per-offer redemptions without exposing individual occupant names to external retail merchants. |\n| **`ReaTenantHealthScorecard`** | `periodKey` (`YYYY-MM`), `activeMemberAdoptionPct` (`Decimal128`), `avgServiceCsat` (`Decimal128`), `slaBreachCount` (`Integer`), `amenityEventEngagementScore` (`Decimal128`), `latestNpsScore` (`Decimal128`), `compositeHealthScore` (`Decimal128`, `0..100`), `riskBand` (`HEALTHY`, `WATCH`, `AT_RISK`), `monthsToLeaseExpiry` (`Integer`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `tenantAccountRef` -> `CrmAccount`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `retentionWorkItemId` -> Home `WorkItem` (nullable) | Auto-opens a Landlord Retention `WorkItem` when `riskBand == AT_RISK && monthsToLeaseExpiry <= 12`. |\n\n---\n\n## 5. Core End-to-End User Journeys (6 Journeys)\n\n### Journey 1: Delegated Tenant Suite Admin Onboarding & Fitness Waiver Mobile Pass\n1. Landlord onboards `Horizon BioLabs` (`Floor 14`, `ReaCommercialLease` in `#145`) and designates `Dana` as `TENANT_COMPANY_ADMIN`.\n2. Dana logs into `tenant-roster-passes`, imports 38 `Horizon BioLabs` employees (`ProvisionTenantMember`), and grants her Operations Lead `canAuthorizeBillableCharges = true`.\n3. Employee `Marcus` opens `#149` on `390px` mobile, receives his lobby/Floor 14 `ReaBuildingAccessPass`, signs the digital `FITNESS_LIABILITY` waiver (`Rapider Drive`), and immediately unlocks `FITNESS_CENTER` access on his pass.\n\n### Journey 2: Shared Town-Hall Amenity Booking with Free Lease Credits, Overage Billing & Setup WO\n1. `Horizon BioLabs` (`8.00` free conference-center hours/month) books `2nd Floor Town-Hall Auditorium` for a 10-hour all-hands (`08:00–18:00`, `30m` setup + `30m` cleanup buffers, `\\$125.00/hr` overage, `\\$75.00` cleaning fee) via `request-amenity-drawer`.\n2. Engine applies `8.00` free hours, calculates exact `Decimal128` `2.00 * \\$125.00 + \\$75.00 = \\$325.00` `totalChargeAmount`, verifies the requester has `canAuthorizeBillableCharges = true`, and routes a `MANAGER_APPROVAL` Home `WorkItem` to the Property Experience Manager.\n3. Upon approval (`ApproveAmenityBooking`), `#149` locks `[07:30, 18:30)` on `shared-amenities`, emits a `\\$325.00` `FinInvoice` intent to `billing`, and spawns a `Chair Setup + Post-Event Cleaning` `MfgMaintenanceWorkOrder` in `maintenance`.\n\n### Journey 3: Tenant `Too Cold` Comfort Request & Billable Saturday Overtime HVAC\n1. Occupant taps **New Request** (`390px`) on `service-hvac-requests` (`THERMAL_COMFORT`: *\"Suite 1400 West conference room is 63°F\"*). `#149` creates a linked `MfgMaintenanceWorkOrder` in `maintenance`; once the building engineer adjusts the VAV damper, the occupant taps a `5-Star` CSAT rating.\n2. For a Saturday product launch, Dana submits an `OVERTIME_HVAC` request (`Saturday 08:00–13:00 = 5.00 hrs @ \\$65.00/hr = \\$325.00`), queuing the BMS schedule for building engineering and posting the `\\$325.00` charge to `billing`.\n\n### Journey 4: Freight-Elevator Slot Reservation with Vendor COI Gate\n1. `Horizon BioLabs` schedules a lab-bench delivery (`Thursday 18:00–20:00`) on `freight-dock-schedule` and uploads the moving company's COI PDF.\n2. Booking enters `PENDING_COI_APPROVAL` and creates a Property Manager Home `WorkItem`. Once verified (`vendorCoiVerified = true`), the dock slot locks and `#147` receives pre-clearance for the delivery crew.\n\n### Journey 5: At-Risk Tenant Health Detection 9 Months Before `#145` Lease Expiration\n1. Monthly `wf-rea-tenant-health-scorer` computes `ReaTenantHealthScorecard` for `Vertex Media` (`monthsToLeaseExpiry = 9` from `#145`), detecting `3` HVAC SLA breaches in `maintenance`, dropped app engagement, and an `NPS` drop, lowering `compositeHealthScore` to `52.00` (`AT_RISK`).\n2. `#149` opens an urgent Retention Home `WorkItem` for the Landlord Asset Director, who opens `tenant-account-detail` and runs **AI Renewal Brief** to prepare a targeted executive check-in before renewal talks start.\n\n### Journey 6: Click-Through Navigation & Filter State Restoration\n1. Property Manager filters `tenant-health-retention` by `Risk Band: \"AT_RISK\"`, verifying `#activeFilterTagsBar` chips and `[Clear all]`, clicks `Vertex Media` to open `#/tenant-account-detail?id=...` cleanly, and clicks `Back` to restore filter state.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages (`P0`, `P1`, `P2`)\n\n### `P0` Foundation Work Packages (10 Capabilities)\n- **WP-P0-1 — Tenant Rosters, Delegated Suite Admins, Mobile Passes & `#147` Guest Sync (`TEB-001`–`TEB-003`, `TEB-005`):** `ReaTenantMemberProfile`, `TENANT_COMPANY_ADMIN` self-service, `ReaBuildingAccessPass`, and 1-tap `#147` visitor pre-clearance (`tenant-roster-passes`).\n- **WP-P0-2 — Shared Amenities, Lease Credits & Paid Overage Billing (`TEB-007`, `TEB-008`):** `ReaBuildingAmenity` and buffer-aware `ReaAmenityBooking` -> `billing`/`payments` (`shared-amenities`, `amenity-booking-detail`, `request-amenity-drawer`).\n- **WP-P0-3 — Suite Service Triage (`maintenance`/`support`), Overtime HVAC, Segmented Feed & Health Scorecards (`TEB-013`, `TEB-014`, `TEB-018`, `TEB-022`):** `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, and `ReaTenantHealthScorecard` (`building-experience-feed`, `service-hvac-requests`, `announcements-studio`, `tenant-health-retention`, `tenant-account-detail`).\n\n### `P1` Scale & Enterprise Work Packages (11 Capabilities)\n- **WP-P1-1 — Portfolio Passports, Building Guides, Waivers, Cleanup WOs & Cutoff Rules (`TEB-004`, `TEB-006`, `TEB-009`–`TEB-011`):** Multi-building passes, digital handbooks, fitness/event waivers, auto-spawned `maintenance` setup/cleanup WOs, and cancellation cutoffs (`perks-building-guide`).\n- **WP-P1-2 — Freight-Dock COI Gates, Outage Banners, Community Events, Perks, Surveys & Churn `WorkItem`s (`TEB-015`, `TEB-017`, `TEB-019`–`TEB-021`, `TEB-023`):** Freight-dock scheduling (`freight-dock-schedule`), outage banners, `MktEvent` RSVPs (`events-community`), `ReaBuildingPerkOffer` redemptions, `MktSurvey` NPS, and `AT_RISK` Asset-Manager `WorkItem`s.\n\n### `P2` Adjacent & Grounded AI Work Packages (7 Capabilities)\n- **WP-P2-1 — Off-Peak Promos, Live IAQ/ESG Cards & Portfolio Retention Scorecard (`TEB-012`, `TEB-016`, `TEB-028`):** Off-peak amenity slots, CO₂/energy widgets, and executive retention analytics.\n- **WP-P2-2 — Grounded tenant workplace experience-REX-Style Building Experience AI (`TEB-024`–`TEB-027`):** Building Guide AI concierge, cited `#145` tenant renewal-brief generator, advisory/event copywriter, and amenity programming recommender.\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **Landlord Asset / Experience Manager** | Full CRUD on `ReaBuildingAmenity`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, approves amenity & freight-dock `WorkItem`s, views all `ReaTenantHealthScorecard`s. | Cannot impersonate tenant billable authorization (`canAuthorizeBillableCharges`) without audited tenant request. |\n| **Tenant Suite Admin (`TENANT_COMPANY_ADMIN`)** | Invites/offboards own `tenantAccountRef` `ReaTenantMemberProfile`s, toggles `canAuthorizeBillableCharges` for own employees, books overtime HVAC/freight/paid amenities, views own company requests & invoices. | Strictly isolated to own `(propertyId, tenantAccountRef)`: zero visibility into other tenant companies' rosters, health scores, or service tickets! |\n| **Tenant Occupant / Resident** | Uses `ReaBuildingAccessPass`, pre-clears `#147` guests, RSVPs to `MktEvent`s, redeems perks, submits comfort/repair `ReaBuildingServiceRequest`s, books free/self-pay amenities. | Cannot incur company-billed amenity overages or overtime HVAC unless `canAuthorizeBillableCharges == true`; zero visibility into Landlord `ReaTenantHealthScorecard`. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Domain Commands\nEvery command enforces `{ idempotencyKey, correlationId, expectedVersion }`:\n1. `ProvisionOrOffboardTenantMember({ memberProfileId, action, memberData })` — Issues or atomically revokes `ReaBuildingAccessPass` credentials.\n2. `BookBuildingAmenity({ amenityId, memberProfileId, startAt, endAt, attendeeCount })` — Enforces non-overlapping `[startAt - setupBuffer, endAt + cleanupBuffer)`, checks waiver & billable authorization, deducts free credits, and routes `WorkItem` or confirms + emits `FinInvoice` + setup `MfgMaintenanceWorkOrder`.\n3. `SubmitBuildingServiceRequest({ propertyId, unitId, requesterMemberId, requestType, payload })` — Dispatches `MfgMaintenanceWorkOrder` (`maintenance`), `SupTicket` (`support`), `OVERTIME_HVAC` `FinInvoice` (`billing`), or `FREIGHT_ELEVATOR` COI `WorkItem`.\n4. `VerifyFreightDockCoiAndApprove({ requestId, approvalWorkItemId })` — Locks freight-dock slot and pre-clears vendor crew in `#147`.\n5. `PublishBuildingAnnouncement({ propertyId, headline, bodyMarkdown, urgency, targetFloorCodes[], targetTenantAccountRefs[] })` — Publishes segmented post and dispatches `email`/`sms` alerts.\n\n### Domain Events Published & Consumed (Kafka)\n- **Published:** `rea.tenant_member.offboarded`, `rea.amenity_booking.confirmed`, `rea.overtime_hvac.scheduled`, `rea.freight_dock.approved`, `rea.building_announcement.published`, `rea.tenant_health.at_risk_flagged`.\n- **Consumed:** `rea.commercial_lease.activated` & `.terminated` (from `#145`), `rea.tenancy_lease.activated` & `.terminated` (from `#141`), `mfg.maintenance_work_order.completed` (from `maintenance` to prompt occupant `1–5` star CSAT), `mkt.survey.response_recorded` (from `surveys`).\n\n### `requiredWorkflows` (in `app.manifest.json`)\n- `wf-rea-monthly-amenity-credit-reset`: Replenishes commercial lease monthly free amenity credit balances on the 1st of each month.\n- `wf-rea-tenant-health-scorer`: Computes `ReaTenantHealthScorecard` and opens Asset-Manager Home `WorkItem`s for `AT_RISK` expiring tenants.\n- `wf-rea-lease-expiry-pass-revoker`: Revokes `ReaBuildingAccessPass` credentials automatically when a `#141` or `#145` lease terminates.\n\n### Grounded Rapider AI Contract\nAI assistants (`TEB-024`–`TEB-027`) strictly enforce multi-tenant company isolation (`Tenant A` users can never query `Tenant B` tickets or Landlord `ReaTenantHealthScorecard`s), cite exact Building Guide sections and `workOrderNumber`s, and require explicit human confirmation before submitting billable HVAC/amenity charges or broadcasting building-wide alerts.\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **Strict Multi-Tenant Company Isolation:** Row-level ACL filters guarantee `TENANT_COMPANY_ADMIN` and `TENANT_OCCUPANT` users in a multi-tenant office tower never see another company's employees, bookings, or requests, and Landlord internal churn/health scores (`ReaTenantHealthScorecard`) are strictly hidden from all tenant roles.\n- **GDPR / CCPA Occupant Privacy:** Retail perk redemptions and IAQ/engagement analytics aggregate at the building/company level without selling or sharing occupant PII with third-party merchants; offboarded member profiles scrub contact PII per retention policy.\n- **Mobile-First Daily Utility (`390px` / `768px` / `1440px`):** WCAG 2.2 AA contrast (`#ffffff !important` on primary/danger buttons), `< 1.5s` mobile pass render at `390px` for lobby turnstile entry, and full dark/light theme support.\n\n---\n\n## 10. Deterministic Acceptance Criteria (14 Testable Criteria)\n\n1. **Sidebar Section 3+ Item Compliance:** `Community & Experience` (3 items), `Amenities & Building Ops` (3 items), and `Tenants & Retention` (3 items) each contain `>= 3` visible items; `tenant-account-detail`, `amenity-booking-detail`, and `request-amenity-drawer` set `displayOnMenu: false`.\n2. **Cross-Tenant Company Isolation:** Querying `tenant-roster-passes`, `service-hvac-requests`, or `building-experience-feed` as `Tenant A` returns zero records scoped exclusively to `Tenant B`, and `403` on `ReaTenantHealthScorecard`.\n3. **Buffer-Aware Amenity Conflict Guard:** `BookBuildingAmenity` rejects (`409 AMENITY_BUFFER_CONFLICT`) any request whose `[startAt - setupBufferMinutes, endAt + cleanupBufferMinutes)` overlaps an existing `CONFIRMED` booking on that `amenityId`.\n4. **Billable Authorization & Credit Quota Math (`Decimal128`):** Booking an amenity or `OVERTIME_HVAC` resulting in `totalChargeAmount > \\$0.00` rejects with `403 BILLABLE_AUTH_REQUIRED` unless `canAuthorizeBillableCharges == true`, and accurately deducts `monthlyAmenityCreditsRemaining` before computing overage dollars.\n5. **Mandatory Waiver Enforcement:** Attempting to enable `FITNESS_CENTER` on `ReaBuildingAccessPass` or confirm an amenity with `requiredWaiverType` without a signed waiver fails with `422 WAIVER_SIGNATURE_REQUIRED`.\n6. **Freight-Dock COI Gate:** A `FREIGHT_ELEVATOR` `ReaBuildingServiceRequest` remains blocked in `PENDING_COI_APPROVAL` until `VerifyFreightDockCoiAndApprove` executes with an approved `WorkItem`.\n7. **Atomic Pass Revocation on Offboarding:** Offboarding a `ReaTenantMemberProfile` atomically transitions all linked `ReaBuildingAccessPass` records to `REVOKED`.\n8. **Seamless `maintenance` & `support` Routing:** Submitting a `THERMAL_COMFORT` request creates a canonical `MfgMaintenanceWorkOrder` (`maintenance`) rather than a shadow CMMS table, and completing that WO unlocks occupant `1–5` star CSAT capture.\n9. **At-Risk Expiring Lease Escalation:** Computing a `ReaTenantHealthScorecard` with `riskBand == AT_RISK && monthsToLeaseExpiry <= 12` deterministically opens an idempotent Landlord Retention Home `WorkItem`.\n10. **SWR Reads & Active Filter Tags:** Every list/kanban/feed page uses `findSWR`/`countSWR` without manual `isDeleted` `where` clauses, filters `item.isDeleted !== true` in memory, and renders `#activeFilterTagsBar` with escaped chips and `[Clear all]`.\n11. **Table Actions & Real Click-Through Navigation:** Zero standalone \"View\" buttons in `Actions`; clicking tenant company names or `bookingCode`s navigates cleanly to detail routes without `<base href>` 404 traps, and `Back` restores filter state.\n12. **Custom Elements & Drawer Lifecycle:** Uses `<rapider-kanban>` on `service-hvac-requests` and `<rapider-phone-input>` in `request-amenity-drawer`; drawers reset buttons in `finally` and auto-close on save/cancel.\n13. **Zero `projectId` Field:** No `Rea*` model defines `projectId`.\n14. **Theme & Contrast Validation:** All 12 pages pass deterministic dark/light `validate_theme` checks with `#ffffff !important` on primary/danger buttons and zero `window.alert`/`confirm`/`prompt`.\n",
-    "files": [],
-    "createdById": "e995822b-f88d-40ef-86df-0f07cb1149d8",
-    "createdBy": "Tansel Ozkusaksiz"
-  },
+  "coverPage": "# Rapider Tenant Engagement & Building Experience\n\n**Suite:** Rapider Real Estate Suite\n\n**Executive Outcome:**  \n`tenant-engagement-and-building-experience` serves Commercial Office Landlords, Mixed-Use Campus Operators, Class-A Multifamily Communities, and Tenant Suite Administrators as the unified **Digital Front Door and Tenant Retention Platform**. Layered directly over `#141` (`property-management`) and `#145` (`commercial-lease-administration`), it governs delegated tenant-company member rosters (`ReaTenantMemberProfile`) and mobile building passes (`ReaBuildingAccessPass`), shared base-building amenity reservations with lease credit quotas and paid overage billing (`ReaBuildingAmenity`, `ReaAmenityBooking`), tenant operational requests including after-hours overtime HVAC and COI-gated freight-elevator slots (`ReaBuildingServiceRequest`), floor/company-targeted announcements (`ReaBuildingAnnouncement`), ground-floor retail perks (`ReaBuildingPerkOffer`), and account-level Tenant Health & Renewal-Risk scoring (`ReaTenantHealthScorecard`).\n\n**Architectural Distinction from `#146` (`space-planning-and-workplace-utilization`):**  \n`#146` manages a single corporate employer's *internal* hybrid seating, floor restacks, and employee desk hoteling. `#149` is the **multi-tenant landlord-to-transaction & lease lifecycle building experience layer** governing shared base-building amenities across distinct tenant companies (`CrmAccount`s), freight docks, overtime HVAC billing, community events, retail perks, and lease-renewal retention telemetry!\n\n**SME Fast-Path vs. Enterprise Progressive Disclosure:**\n- **SME Fast-Path:** Activate a branded mobile/web Building Hub (`390px`) for a commercial or mixed-use property in minutes, let Tenant Office Managers board meeting intelligence their own suite employees, publish building advisories, enable 1-tap `Too Hot / Too Cold` requests routed straight to `maintenance`, and book shared conference rooms or rooftop lounges.\n- **Enterprise Depth:** Portfolio Passport cross-building lounge access (`enterprise industry standard` / `tenant workplace experience`), lease-clause monthly free-hour credit pools + `\\$125.00/hr` paid overage & `\\$65.00/hr` Saturday overtime HVAC billing (`institutional property accounting` / `Cove` -> `billing`), COI-verified freight-dock scheduling via Home `WorkItem`s, live IAQ/ESG comfort cards (`community & amenity booking`), and REX-style Tenant Health & Churn Risk scorecards alerting Asset Managers 12 months before `#145` lease expirations.\n\n**Target Personas:**\n1. **Property Experience / Community Manager:** Curates `ReaBuildingAnnouncement`s, community `MktEvent`s, local `ReaBuildingPerkOffer`s, approves shared town-hall bookings and freight-dock COIs.\n2. **Tenant Suite / Office Administrator (Scoped Commercial Tenant Role):** Self-manages company `ReaTenantMemberProfile` roster, authorizes overtime HVAC & paid amenity bookings, pre-clears `#147` lobby guests, and tracks suite service tickets.\n3. **Building Occupant / Resident:** Uses `390px` mobile pass, RSVPs to rooftop yoga/networking events, redeems lobby coffee perks, books wellness/fitness slots, and rates completed repair requests.\n4. **Landlord Asset / Leasing Director:** Monitors `ReaTenantHealthScorecard` across expiring `#145` commercial tenants to prevent surprise move-outs.\n",
+  "scopeOfWork": "# #149 Tenant Engagement & Building Experience (`tenant-engagement-and-building-experience`) — Scope of Work (SOW)\n\n- **App Number & Name:** `#149` — Tenant Engagement & Building Experience\n- **App Key:** `tenant-engagement-and-building-experience`\n- **Rapider Suite / Domain Key:** `REA` (Real Estate, Facilities & Construction Suite)\n- **Model Prefix:** `Rea*`\n- **Industry Benchmark Standard:** Benchmarked against leading global enterprise platforms in this category\n- **Industry Benchmark Alignment:** Benchmarked against leading global enterprise platforms to combine fast SME time-to-value with enterprise-scale governance, auditability, and cross-suite automation on Rapider.\n- **Companion Combined Feature Set:** [`../combined-features/149-tenant-engagement-and-building-experience-features.md`](../combined-features/149-tenant-engagement-and-building-experience-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Executive Outcome:**  \n`tenant-engagement-and-building-experience` serves Commercial Office Landlords, Mixed-Use Campus Operators, Class-A Multifamily Communities, and Tenant Suite Administrators as the unified **Digital Front Door and Tenant Retention Platform**. Layered directly over `#141` (`property-management`) and `#145` (`commercial-lease-administration`), it governs delegated tenant-company member rosters (`ReaTenantMemberProfile`) and mobile building passes (`ReaBuildingAccessPass`), shared base-building amenity reservations with lease credit quotas and paid overage billing (`ReaBuildingAmenity`, `ReaAmenityBooking`), tenant operational requests including after-hours overtime HVAC and COI-gated freight-elevator slots (`ReaBuildingServiceRequest`), floor/company-targeted announcements (`ReaBuildingAnnouncement`), ground-floor retail perks (`ReaBuildingPerkOffer`), and account-level Tenant Health & Renewal-Risk scoring (`ReaTenantHealthScorecard`).\n\n**Architectural Distinction from `#146` (`space-planning-and-workplace-utilization`):**  \n`#146` manages a single corporate employer's *internal* hybrid seating, floor restacks, and employee desk hoteling. `#149` is the **multi-tenant landlord-to-transaction & lease lifecycle building experience layer** governing shared base-building amenities across distinct tenant companies (`CrmAccount`s), freight docks, overtime HVAC billing, community events, retail perks, and lease-renewal retention telemetry!\n\n**SME Fast-Path vs. Enterprise Progressive Disclosure:**\n- **SME Fast-Path:** Activate a branded mobile/web Building Hub (`390px`) for a commercial or mixed-use property in minutes, let Tenant Office Managers board meeting intelligence their own suite employees, publish building advisories, enable 1-tap `Too Hot / Too Cold` requests routed straight to `maintenance`, and book shared conference rooms or rooftop lounges.\n- **Enterprise Depth:** Portfolio Passport cross-building lounge access (`enterprise industry standard` / `tenant workplace experience`), lease-clause monthly free-hour credit pools + `\\$125.00/hr` paid overage & `\\$65.00/hr` Saturday overtime HVAC billing (`institutional property accounting` / `Cove` -> `billing`), COI-verified freight-dock scheduling via Home `WorkItem`s, live IAQ/ESG comfort cards (`community & amenity booking`), and REX-style Tenant Health & Churn Risk scorecards alerting Asset Managers 12 months before `#145` lease expirations.\n\n**Target Personas:**\n1. **Property Experience / Community Manager:** Curates `ReaBuildingAnnouncement`s, community `MktEvent`s, local `ReaBuildingPerkOffer`s, approves shared town-hall bookings and freight-dock COIs.\n2. **Tenant Suite / Office Administrator (Scoped Commercial Tenant Role):** Self-manages company `ReaTenantMemberProfile` roster, authorizes overtime HVAC & paid amenity bookings, pre-clears `#147` lobby guests, and tracks suite service tickets.\n3. **Building Occupant / Resident:** Uses `390px` mobile pass, RSVPs to rooftop yoga/networking events, redeems lobby coffee perks, books wellness/fitness slots, and rates completed repair requests.\n4. **Landlord Asset / Leasing Director:** Monitors `ReaTenantHealthScorecard` across expiring `#145` commercial tenants to prevent surprise move-outs.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In Scope\n- `ReaTenantMemberProfile` onboarding, delegated `TENANT_COMPANY_ADMIN` roster self-service, `ReaBuildingAccessPass` mobile/Passport credentials, 1-tap `#147` guest pre-clearance, and Digital Building Guides (`TEB-001`–`TEB-006`).\n- `ReaBuildingAmenity` catalog, `ReaAmenityBooking` (monthly free lease-credit quotas, paid `Decimal128` overage & cleaning fees -> `billing`/`payments`, digital liability waivers, auto-spawned `maintenance` setup/cleaning WOs, cancellation cutoffs) (`TEB-007`–`TEB-012`).\n- `ReaBuildingServiceRequest` intake (comfort/repair -> `maintenance` `MfgMaintenanceWorkOrder`; concierge -> `support` `SupTicket`; after-hours HVAC -> `billing`; freight-elevator/loading-dock COI gates -> `WorkItem`s), IAQ/ESG widgets, and outage push banners (`TEB-013`–`TEB-017`).\n- Segmented `ReaBuildingAnnouncement` broadcasts, `events` (`MktEvent`) community RSVPs, `ReaBuildingPerkOffer` retail redemptions, `surveys` (`MktSurvey`) NPS pulses, `ReaTenantHealthScorecard` retention scoring, and grounded experience AI copilots (`TEB-018`–`TEB-028`).\n\n### Out of Scope\n- Executing technician dispatch, preventive asset maintenance, or spare parts (owned by `maintenance` and `assets`).\n- Lobby kiosk ID scanning, watchlist blocklists, and emergency muster roll calls (owned by `#147` `visitor-and-reception-management`).\n- Underlying lease rent rolls, ASC 842 schedules, and CAM desktop audits (owned by `#141` and `#145`).\n- Payment card tokenization, invoice tax engines, and GL accounting (owned by `billing`, `payments`, and `acc`).\n\n### Suite Ownership & Integration Contract Table\n\n| Domain / App | Owns | Integration Contract with `tenant-engagement-and-building-experience` |\n| :--- | :--- | :--- |\n| **`tenant-engagement-and-building-experience` (`REA`)** | `ReaTenantMemberProfile`, `ReaBuildingAccessPass`, `ReaBuildingAmenity`, `ReaAmenityBooking`, `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, `ReaTenantHealthScorecard` | Governs occupant experience, shared building amenities, freight/overtime-HVAC requests, announcements, perks, and tenant retention health. |\n| **`property-management` (`#141`) & `commercial-lease-admin` (`#145`)** | `ReaProperty`, `ReaUnit`, `ReaTenancyLease`, `ReaCommercialLease` | Supplies building/suite hierarchy, overtime HVAC hourly lease rates, monthly free amenity credits, and lease expiration dates. |\n| **`maintenance` (`MFG`) & `support` (`SUP`)** | `MfgMaintenanceWorkOrder`, `SupTicket` | Executes physical suite/building repair work orders, amenity setup/cleanup WOs, and concierge helpdesk tickets; returns live status updates to `#149`. |\n| **`visitor-and-reception-management` (`#147` — `REA`)** | `ReaVisitorVisit` | Receives 1-tap tenant guest pre-clearances for ground-floor lobby turnstiles. |\n| **`billing` & `payments` (`FIN` — Built)** | `FinInvoice`, `FinPaymentIntent` | Bills commercial tenant accounts or individual occupants for paid amenity overages and after-hours HVAC zone usage. |\n| **`crm`, `events`, `surveys`, `email` & `sms` (`CRM`/`MKT`)** | `CrmAccount`, `CrmContact`, `MktEvent`, `MktSurvey`, `MktEmailMessage`, `MktSmsMessage` | Powers tenant company accounts, community event RSVPs, NPS pulse surveys, and multi-channel building alerts. |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nAll visible sidebar groups strictly satisfy Rapider's **Minimum 3 Items per Section Rule** (`Community & Experience`: 3 items, `Amenities & Building Ops`: 3 items, `Tenants & Retention`: 3 items; 9 visible + 3 hidden detail/drawer routes = 12 total pages).\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX |\n| :---: | :--- | :--- | :--- | :---: | :--- |\n| 1 | `building-experience-feed` | Building Hub & Live Feed | `Community & Experience` | `true` | Outage alert banner, KPI strip (`Active Occupants`, `Amenity Bookings Today`, `Open Suite Requests`, `Portfolio NPS`), `ReaBuildingAnnouncement` feed, IAQ/ESG widget, `#activeFilterTagsBar`. |\n| 2 | `events-community` | Community Events & Polls | `Community & Experience` | `true` | Building `MktEvent` calendar & RSVP capacity cards, `MktSurvey` pulse polls, attendance breakdown by tenant company. |\n| 3 | `perks-building-guide` | Local Perks & Building Guide | `Community & Experience` | `true` | `ReaBuildingPerkOffer` marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info). |\n| 4 | `shared-amenities` | Shared Amenities & Bookings | `Amenities & Building Ops` | `true` | `ReaBuildingAmenity` catalog + `ReaAmenityBooking` timeline/table (`Free Credits Used`, `Paid Overage \\$`, waiver badge, auto-cleanup WO link). |\n| 5 | `service-hvac-requests` | Suite Service & Overtime HVAC | `Amenities & Building Ops` | `true` | `<rapider-kanban>` (`Submitted` -> `Routed to Maintenance/Concierge` -> `In Progress` -> `Completed & Rated`) for `ReaBuildingServiceRequest`s + Overtime HVAC scheduler. |\n| 6 | `freight-dock-schedule` | Freight Elevator & Dock Slots | `Amenities & Building Ops` | `true` | Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home `WorkItem` approval badge. |\n| 7 | `tenant-roster-passes` | Tenant Roster & Mobile Passes | `Tenants & Retention` | `true` | `findSWR` `ReaTenantMemberProfile` & `ReaBuildingAccessPass` directory (`Delegated Suite Admin` self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke. |\n| 8 | `tenant-health-retention` | Tenant Health & Renewal Risk | `Tenants & Retention` | `true` | `ReaTenantHealthScorecard` table across `CrmAccount`s (`Health Score 0–100`, `Adoption %`, `WO CSAT`, `NPS`, `#145 Lease Expiry`, `At-Risk` pill), AI Renewal Brief trigger. |\n| 9 | `announcements-studio` | Targeted Broadcasts Studio | `Tenants & Retention` | `true` | `ReaBuildingAnnouncement` audience segmenter (`Property`, `Floors`, `Tenant Company`, `Suite Admins`), read-receipt % analytics, AI copywriter helper. |\n| 10 | `tenant-account-detail` | Tenant Company Experience 360 | *(Hidden)* | `false` | Deep-link route (`#/tenant-account-detail?id=...`) with `Back` filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and `projectChannelMessage` thread. |\n| 11 | `amenity-booking-detail` | Amenity Booking & Waiver 360 | *(Hidden)* | `false` | Deep-link route (`#/amenity-booking-detail?id=...`) showing signed liability waiver PDF ref, setup/cleanup `MfgMaintenanceWorkOrder`, and `FinInvoice` fee breakdown. |\n| 12 | `request-amenity-drawer` | Booking / HVAC / Member Drawer | *(Hidden)* | `false` | Mobile-ready (`390px`) sliding drawer with `<rapider-phone-input>`, live credit/fee preview, `try...catch...finally` button reset, auto-close, and SWR invalidation. |\n\n---\n\n## 4. Canonical Data Models (`Rea*` — 8 Models)\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`ReaTenantMemberProfile`** | `memberRole` (`TENANT_COMPANY_ADMIN`, `TENANT_OCCUPANT`, `RESIDENT`, `RETAIL_MERCHANT`), `canAuthorizeBillableCharges` (`Boolean`), `monthlyAmenityCreditsRemaining` (`Decimal128`), `signedWaiverTypes` (`String[]`), `phone` (`String`), `status` (`INVITED`, `ACTIVE`, `SUSPENDED`, `OFFBOARDED`), `version` (`Integer`) | `propertyId` -> `ReaProperty` (`#141`), `unitId` -> `ReaUnit` (`#141`), `tenantAccountRef` -> `CrmAccount`, `crmContactRef` -> `CrmContact`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `tenancyLeaseId` -> `ReaTenancyLease` (`#141`, nullable) | Strictly isolated by `(propertyId, tenantAccountRef)` for `TENANT_COMPANY_ADMIN`; transitioning to `OFFBOARDED` atomically revokes all active `ReaBuildingAccessPass` credentials. |\n| **`ReaBuildingAccessPass`** | `passCode` (`String`), `passTier` (`HOME_BUILDING`, `PORTFOLIO_PASSPORT`), `allowedPropertyIds` (`UUID[]`), `allowedZones` (`String[]`: `LOBBY_TURNSTILE`, `SUITE_FLOOR`, `FITNESS_CENTER`, `BIKE_CAGE`), `issuedAt` (`DateTime`), `revokedAt` (`DateTime`), `status` (`ACTIVE`, `SUSPENDED`, `REVOKED`), `version` (`Integer`) | `memberProfileId` -> `ReaTenantMemberProfile`, `homePropertyId` -> `ReaProperty` | Adding `FITNESS_CENTER` to `allowedZones` requires `\"FITNESS_LIABILITY\"` in `memberProfile.signedWaiverTypes`. |\n| **`ReaBuildingAmenity`** | `amenityCode` (`String`), `name` (`String`), `category` (`AUDITORIUM`, `ROOFTOP_TERRACE`, `CONFERENCE_CENTER`, `FITNESS_STUDIO`, `LOUNGE`, `WELLNESS_ROOM`, `FREIGHT_DOCK`), `capacity` (`Integer`), `hourlyRate` (`Decimal128`), `cleaningFee` (`Decimal128`), `setupBufferMinutes` (`Integer`), `cleanupBufferMinutes` (`Integer`), `cancellationCutoffHours` (`Integer`), `requiredWaiverType` (`String`), `approvalMode` (`AUTO_APPROVE`, `MANAGER_APPROVAL`), `status` (`AVAILABLE`, `MAINTENANCE_OUTAGE`), `version` (`Integer`) | `propertyId` -> `ReaProperty` | `hourlyRate >= 0` and `cleaningFee >= 0` (`Decimal128`). |\n| **`ReaAmenityBooking`** | `bookingCode` (`String`), `startAt` (`DateTime`), `endAt` (`DateTime`), `effectiveBlockStartAt` (`DateTime`), `effectiveBlockEndAt` (`DateTime`), `attendeeCount` (`Integer`), `freeCreditsAppliedHours` (`Decimal128`), `billableOverageAmount` (`Decimal128`), `cleaningFeeAmount` (`Decimal128`), `totalChargeAmount` (`Decimal128`), `status` (`PENDING_APPROVAL`, `CONFIRMED`, `CANCELLED`, `COMPLETED`, `NO_SHOW`), `version` (`Integer`) | `amenityId` -> `ReaBuildingAmenity`, `memberProfileId` -> `ReaTenantMemberProfile`, `tenantAccountRef` -> `CrmAccount`, `waiverPdfFileRef` -> Rapider Drive (nullable), `setupWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `approvalWorkItemId` -> Home `WorkItem` (nullable) | Non-overlapping `[effectiveBlockStartAt, effectiveBlockEndAt)` (`startAt - setupBuffer` to `endAt + cleanupBuffer`) per `amenityId`; when `totalChargeAmount > \\$0.00` on a commercial account, requires `memberProfile.canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingServiceRequest`** | `requestNumber` (`String`), `requestType` (`THERMAL_COMFORT`, `REPAIR_CLEANING`, `OVERTIME_HVAC`, `FREIGHT_ELEVATOR`, `CONCIERGE`), `scheduledStartAt` (`DateTime`), `scheduledEndAt` (`DateTime`), `overtimeHvacHours` (`Decimal128`), `overtimeBillableAmount` (`Decimal128`), `vendorCoiVerified` (`Boolean`), `csatRating` (`Integer`, `1..5`), `status` (`SUBMITTED`, `PENDING_COI_APPROVAL`, `ROUTED_IN_PROGRESS`, `COMPLETED`, `CANCELLED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `unitId` -> `ReaUnit`, `requesterMemberId` -> `ReaTenantMemberProfile`, `maintenanceWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `supportTicketRef` -> `SupTicket` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `coiFileRef` -> Rapider Drive (nullable) | `FREIGHT_ELEVATOR` requests cannot transition to `ROUTED_IN_PROGRESS` until `vendorCoiVerified == true` via Property Manager `WorkItem`; `OVERTIME_HVAC` requires `canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingAnnouncement`** | `headline` (`String`), `bodyMarkdown` (`String`), `urgency` (`PINNED_EMERGENCY`, `OPERATIONAL_OUTAGE`, `COMMUNITY_NEWS`), `targetFloorCodes` (`String[]`), `targetTenantAccountRefs` (`UUID[]`), `suiteAdminsOnly` (`Boolean`), `publishedAt` (`DateTime`), `expiresAt` (`DateTime`), `readCount` (`Integer`), `status` (`DRAFT`, `PUBLISHED`, `ARCHIVED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `authorEmployeeRef` -> `HrEmployee` | Strictly filters feed visibility so tenant `A` never sees suite-specific advisories targeted exclusively to `targetTenantAccountRefs = [Tenant B]`. |\n| **`ReaBuildingPerkOffer`** | `merchantName` (`String`), `offerTitle` (`String`), `discountSummary` (`String`), `promoCode` (`String`), `validFrom` (`Date`), `validTo` (`Date`), `redemptionCount` (`Integer`), `status` (`ACTIVE`, `EXPIRED`), `version` (`Integer`) | `propertyIds[]` -> `ReaProperty`, `merchantAccountRef` -> `CrmAccount` (nullable) | Tracks anonymized per-offer redemptions without exposing individual occupant names to external retail merchants. |\n| **`ReaTenantHealthScorecard`** | `periodKey` (`YYYY-MM`), `activeMemberAdoptionPct` (`Decimal128`), `avgServiceCsat` (`Decimal128`), `slaBreachCount` (`Integer`), `amenityEventEngagementScore` (`Decimal128`), `latestNpsScore` (`Decimal128`), `compositeHealthScore` (`Decimal128`, `0..100`), `riskBand` (`HEALTHY`, `WATCH`, `AT_RISK`), `monthsToLeaseExpiry` (`Integer`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `tenantAccountRef` -> `CrmAccount`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `retentionWorkItemId` -> Home `WorkItem` (nullable) | Auto-opens a Landlord Retention `WorkItem` when `riskBand == AT_RISK && monthsToLeaseExpiry <= 12`. |\n\n---\n\n## 5. Core End-to-End User Journeys (6 Journeys)\n\n### Journey 1: Delegated Tenant Suite Admin Onboarding & Fitness Waiver Mobile Pass\n1. Landlord onboards `Horizon BioLabs` (`Floor 14`, `ReaCommercialLease` in `#145`) and designates `Dana` as `TENANT_COMPANY_ADMIN`.\n2. Dana logs into `tenant-roster-passes`, imports 38 `Horizon BioLabs` employees (`ProvisionTenantMember`), and grants her Operations Lead `canAuthorizeBillableCharges = true`.\n3. Employee `Marcus` opens `#149` on `390px` mobile, receives his lobby/Floor 14 `ReaBuildingAccessPass`, signs the digital `FITNESS_LIABILITY` waiver (`Rapider Drive`), and immediately unlocks `FITNESS_CENTER` access on his pass.\n\n### Journey 2: Shared Town-Hall Amenity Booking with Free Lease Credits, Overage Billing & Setup WO\n1. `Horizon BioLabs` (`8.00` free conference-center hours/month) books `2nd Floor Town-Hall Auditorium` for a 10-hour all-hands (`08:00–18:00`, `30m` setup + `30m` cleanup buffers, `\\$125.00/hr` overage, `\\$75.00` cleaning fee) via `request-amenity-drawer`.\n2. Engine applies `8.00` free hours, calculates exact `Decimal128` `2.00 * \\$125.00 + \\$75.00 = \\$325.00` `totalChargeAmount`, verifies the requester has `canAuthorizeBillableCharges = true`, and routes a `MANAGER_APPROVAL` Home `WorkItem` to the Property Experience Manager.\n3. Upon approval (`ApproveAmenityBooking`), `#149` locks `[07:30, 18:30)` on `shared-amenities`, emits a `\\$325.00` `FinInvoice` intent to `billing`, and spawns a `Chair Setup + Post-Event Cleaning` `MfgMaintenanceWorkOrder` in `maintenance`.\n\n### Journey 3: Tenant `Too Cold` Comfort Request & Billable Saturday Overtime HVAC\n1. Occupant taps **New Request** (`390px`) on `service-hvac-requests` (`THERMAL_COMFORT`: *\"Suite 1400 West conference room is 63°F\"*). `#149` creates a linked `MfgMaintenanceWorkOrder` in `maintenance`; once the building engineer adjusts the VAV damper, the occupant taps a `5-Star` CSAT rating.\n2. For a Saturday product launch, Dana submits an `OVERTIME_HVAC` request (`Saturday 08:00–13:00 = 5.00 hrs @ \\$65.00/hr = \\$325.00`), queuing the BMS schedule for building engineering and posting the `\\$325.00` charge to `billing`.\n\n### Journey 4: Freight-Elevator Slot Reservation with Vendor COI Gate\n1. `Horizon BioLabs` schedules a lab-bench delivery (`Thursday 18:00–20:00`) on `freight-dock-schedule` and uploads the moving company's COI PDF.\n2. Booking enters `PENDING_COI_APPROVAL` and creates a Property Manager Home `WorkItem`. Once verified (`vendorCoiVerified = true`), the dock slot locks and `#147` receives pre-clearance for the delivery crew.\n\n### Journey 5: At-Risk Tenant Health Detection 9 Months Before `#145` Lease Expiration\n1. Monthly `wf-rea-tenant-health-scorer` computes `ReaTenantHealthScorecard` for `Vertex Media` (`monthsToLeaseExpiry = 9` from `#145`), detecting `3` HVAC SLA breaches in `maintenance`, dropped app engagement, and an `NPS` drop, lowering `compositeHealthScore` to `52.00` (`AT_RISK`).\n2. `#149` opens an urgent Retention Home `WorkItem` for the Landlord Asset Director, who opens `tenant-account-detail` and runs **AI Renewal Brief** to prepare a targeted executive check-in before renewal talks start.\n\n### Journey 6: Click-Through Navigation & Filter State Restoration\n1. Property Manager filters `tenant-health-retention` by `Risk Band: \"AT_RISK\"`, verifying `#activeFilterTagsBar` chips and `[Clear all]`, clicks `Vertex Media` to open `#/tenant-account-detail?id=...` cleanly, and clicks `Back` to restore filter state.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages (`P0`, `P1`, `P2`)\n\n### `P0` Foundation Work Packages (10 Capabilities)\n- **WP-P0-1 — Tenant Rosters, Delegated Suite Admins, Mobile Passes & `#147` Guest Sync (`TEB-001`–`TEB-003`, `TEB-005`):** `ReaTenantMemberProfile`, `TENANT_COMPANY_ADMIN` self-service, `ReaBuildingAccessPass`, and 1-tap `#147` visitor pre-clearance (`tenant-roster-passes`).\n- **WP-P0-2 — Shared Amenities, Lease Credits & Paid Overage Billing (`TEB-007`, `TEB-008`):** `ReaBuildingAmenity` and buffer-aware `ReaAmenityBooking` -> `billing`/`payments` (`shared-amenities`, `amenity-booking-detail`, `request-amenity-drawer`).\n- **WP-P0-3 — Suite Service Triage (`maintenance`/`support`), Overtime HVAC, Segmented Feed & Health Scorecards (`TEB-013`, `TEB-014`, `TEB-018`, `TEB-022`):** `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, and `ReaTenantHealthScorecard` (`building-experience-feed`, `service-hvac-requests`, `announcements-studio`, `tenant-health-retention`, `tenant-account-detail`).\n\n### `P1` Scale & Enterprise Work Packages (11 Capabilities)\n- **WP-P1-1 — Portfolio Passports, Building Guides, Waivers, Cleanup WOs & Cutoff Rules (`TEB-004`, `TEB-006`, `TEB-009`–`TEB-011`):** Multi-building passes, digital handbooks, fitness/event waivers, auto-spawned `maintenance` setup/cleanup WOs, and cancellation cutoffs (`perks-building-guide`).\n- **WP-P1-2 — Freight-Dock COI Gates, Outage Banners, Community Events, Perks, Surveys & Churn `WorkItem`s (`TEB-015`, `TEB-017`, `TEB-019`–`TEB-021`, `TEB-023`):** Freight-dock scheduling (`freight-dock-schedule`), outage banners, `MktEvent` RSVPs (`events-community`), `ReaBuildingPerkOffer` redemptions, `MktSurvey` NPS, and `AT_RISK` Asset-Manager `WorkItem`s.\n\n### `P2` Adjacent & Grounded AI Work Packages (7 Capabilities)\n- **WP-P2-1 — Off-Peak Promos, Live IAQ/ESG Cards & Portfolio Retention Scorecard (`TEB-012`, `TEB-016`, `TEB-028`):** Off-peak amenity slots, CO₂/energy widgets, and executive retention analytics.\n- **WP-P2-2 — Grounded tenant workplace experience-REX-Style Building Experience AI (`TEB-024`–`TEB-027`):** Building Guide AI concierge, cited `#145` tenant renewal-brief generator, advisory/event copywriter, and amenity programming recommender.\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **Landlord Asset / Experience Manager** | Full CRUD on `ReaBuildingAmenity`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, approves amenity & freight-dock `WorkItem`s, views all `ReaTenantHealthScorecard`s. | Cannot impersonate tenant billable authorization (`canAuthorizeBillableCharges`) without audited tenant request. |\n| **Tenant Suite Admin (`TENANT_COMPANY_ADMIN`)** | Invites/offboards own `tenantAccountRef` `ReaTenantMemberProfile`s, toggles `canAuthorizeBillableCharges` for own employees, books overtime HVAC/freight/paid amenities, views own company requests & invoices. | Strictly isolated to own `(propertyId, tenantAccountRef)`: zero visibility into other tenant companies' rosters, health scores, or service tickets! |\n| **Tenant Occupant / Resident** | Uses `ReaBuildingAccessPass`, pre-clears `#147` guests, RSVPs to `MktEvent`s, redeems perks, submits comfort/repair `ReaBuildingServiceRequest`s, books free/self-pay amenities. | Cannot incur company-billed amenity overages or overtime HVAC unless `canAuthorizeBillableCharges == true`; zero visibility into Landlord `ReaTenantHealthScorecard`. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Domain Commands\nEvery command enforces `{ idempotencyKey, correlationId, expectedVersion }`:\n1. `ProvisionOrOffboardTenantMember({ memberProfileId, action, memberData })` — Issues or atomically revokes `ReaBuildingAccessPass` credentials.\n2. `BookBuildingAmenity({ amenityId, memberProfileId, startAt, endAt, attendeeCount })` — Enforces non-overlapping `[startAt - setupBuffer, endAt + cleanupBuffer)`, checks waiver & billable authorization, deducts free credits, and routes `WorkItem` or confirms + emits `FinInvoice` + setup `MfgMaintenanceWorkOrder`.\n3. `SubmitBuildingServiceRequest({ propertyId, unitId, requesterMemberId, requestType, payload })` — Dispatches `MfgMaintenanceWorkOrder` (`maintenance`), `SupTicket` (`support`), `OVERTIME_HVAC` `FinInvoice` (`billing`), or `FREIGHT_ELEVATOR` COI `WorkItem`.\n4. `VerifyFreightDockCoiAndApprove({ requestId, approvalWorkItemId })` — Locks freight-dock slot and pre-clears vendor crew in `#147`.\n5. `PublishBuildingAnnouncement({ propertyId, headline, bodyMarkdown, urgency, targetFloorCodes[], targetTenantAccountRefs[] })` — Publishes segmented post and dispatches `email`/`sms` alerts.\n\n### Domain Events Published & Consumed (Kafka)\n- **Published:** `rea.tenant_member.offboarded`, `rea.amenity_booking.confirmed`, `rea.overtime_hvac.scheduled`, `rea.freight_dock.approved`, `rea.building_announcement.published`, `rea.tenant_health.at_risk_flagged`.\n- **Consumed:** `rea.commercial_lease.activated` & `.terminated` (from `#145`), `rea.tenancy_lease.activated` & `.terminated` (from `#141`), `mfg.maintenance_work_order.completed` (from `maintenance` to prompt occupant `1–5` star CSAT), `mkt.survey.response_recorded` (from `surveys`).\n\n### `requiredWorkflows` (in `app.manifest.json`)\n- `wf-rea-monthly-amenity-credit-reset`: Replenishes commercial lease monthly free amenity credit balances on the 1st of each month.\n- `wf-rea-tenant-health-scorer`: Computes `ReaTenantHealthScorecard` and opens Asset-Manager Home `WorkItem`s for `AT_RISK` expiring tenants.\n- `wf-rea-lease-expiry-pass-revoker`: Revokes `ReaBuildingAccessPass` credentials automatically when a `#141` or `#145` lease terminates.\n\n### Grounded Rapider AI Contract\nAI assistants (`TEB-024`–`TEB-027`) strictly enforce multi-tenant company isolation (`Tenant A` users can never query `Tenant B` tickets or Landlord `ReaTenantHealthScorecard`s), cite exact Building Guide sections and `workOrderNumber`s, and require explicit human confirmation before submitting billable HVAC/amenity charges or broadcasting building-wide alerts.\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **Strict Multi-Tenant Company Isolation:** Row-level ACL filters guarantee `TENANT_COMPANY_ADMIN` and `TENANT_OCCUPANT` users in a multi-tenant office tower never see another company's employees, bookings, or requests, and Landlord internal churn/health scores (`ReaTenantHealthScorecard`) are strictly hidden from all tenant roles.\n- **GDPR / CCPA Occupant Privacy:** Retail perk redemptions and IAQ/engagement analytics aggregate at the building/company level without selling or sharing occupant PII with third-party merchants; offboarded member profiles scrub contact PII per retention policy.\n- **Mobile-First Daily Utility (`390px` / `768px` / `1440px`):** WCAG 2.2 AA contrast (`#ffffff !important` on primary/danger buttons), `< 1.5s` mobile pass render at `390px` for lobby turnstile entry, and full dark/light theme support.\n\n---\n\n## 10. Deterministic Acceptance Criteria (14 Testable Criteria)\n\n1. **Sidebar Section 3+ Item Compliance:** `Community & Experience` (3 items), `Amenities & Building Ops` (3 items), and `Tenants & Retention` (3 items) each contain `>= 3` visible items; `tenant-account-detail`, `amenity-booking-detail`, and `request-amenity-drawer` set `displayOnMenu: false`.\n2. **Cross-Tenant Company Isolation:** Querying `tenant-roster-passes`, `service-hvac-requests`, or `building-experience-feed` as `Tenant A` returns zero records scoped exclusively to `Tenant B`, and `403` on `ReaTenantHealthScorecard`.\n3. **Buffer-Aware Amenity Conflict Guard:** `BookBuildingAmenity` rejects (`409 AMENITY_BUFFER_CONFLICT`) any request whose `[startAt - setupBufferMinutes, endAt + cleanupBufferMinutes)` overlaps an existing `CONFIRMED` booking on that `amenityId`.\n4. **Billable Authorization & Credit Quota Math (`Decimal128`):** Booking an amenity or `OVERTIME_HVAC` resulting in `totalChargeAmount > \\$0.00` rejects with `403 BILLABLE_AUTH_REQUIRED` unless `canAuthorizeBillableCharges == true`, and accurately deducts `monthlyAmenityCreditsRemaining` before computing overage dollars.\n5. **Mandatory Waiver Enforcement:** Attempting to enable `FITNESS_CENTER` on `ReaBuildingAccessPass` or confirm an amenity with `requiredWaiverType` without a signed waiver fails with `422 WAIVER_SIGNATURE_REQUIRED`.\n6. **Freight-Dock COI Gate:** A `FREIGHT_ELEVATOR` `ReaBuildingServiceRequest` remains blocked in `PENDING_COI_APPROVAL` until `VerifyFreightDockCoiAndApprove` executes with an approved `WorkItem`.\n7. **Atomic Pass Revocation on Offboarding:** Offboarding a `ReaTenantMemberProfile` atomically transitions all linked `ReaBuildingAccessPass` records to `REVOKED`.\n8. **Seamless `maintenance` & `support` Routing:** Submitting a `THERMAL_COMFORT` request creates a canonical `MfgMaintenanceWorkOrder` (`maintenance`) rather than a shadow CMMS table, and completing that WO unlocks occupant `1–5` star CSAT capture.\n9. **At-Risk Expiring Lease Escalation:** Computing a `ReaTenantHealthScorecard` with `riskBand == AT_RISK && monthsToLeaseExpiry <= 12` deterministically opens an idempotent Landlord Retention Home `WorkItem`.\n10. **SWR Reads & Active Filter Tags:** Every list/kanban/feed page uses `findSWR`/`countSWR` without manual `isDeleted` `where` clauses, filters `item.isDeleted !== true` in memory, and renders `#activeFilterTagsBar` with escaped chips and `[Clear all]`.\n11. **Table Actions & Real Click-Through Navigation:** Zero standalone \"View\" buttons in `Actions`; clicking tenant company names or `bookingCode`s navigates cleanly to detail routes without `<base href>` 404 traps, and `Back` restores filter state.\n12. **Custom Elements & Drawer Lifecycle:** Uses `<rapider-kanban>` on `service-hvac-requests` and `<rapider-phone-input>` in `request-amenity-drawer`; drawers reset buttons in `finally` and auto-close on save/cancel.\n13. **Zero `projectId` Field:** No `Rea*` model defines `projectId`.\n14. **Theme & Contrast Validation:** All 12 pages pass deterministic dark/light `validate_theme` checks with `#ffffff !important` on primary/danger buttons and zero `window.alert`/`confirm`/`prompt`.\n",
+  "thumbnailUrl": "",
+  "isolationScope": "ENTERPRISE_SHARED",
   "dataModels": [
     {
       "name": "CrmAccount",
@@ -4642,6 +4502,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaTenantMemberProfile",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": []
@@ -4795,6 +4791,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaBuildingAccessPass",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -4999,6 +5131,134 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaBuildingAmenity",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5195,6 +5455,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaAmenityBooking",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5376,6 +5772,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaBuildingServiceRequest",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5565,6 +6097,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaBuildingAnnouncement",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5737,6 +6405,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaBuildingPerkOffer",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5925,6 +6729,142 @@
           "isHidden": false,
           "isArray": false,
           "default": false
+        },
+        {
+          "name": "recordCode",
+          "type": "string",
+          "description": "recordCode attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "description": "title attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "name attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "modelTitle",
+          "type": "string",
+          "description": "modelTitle attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "ownerName",
+          "type": "string",
+          "description": "ownerName attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrLabel",
+          "type": "string",
+          "description": "primaryAttrLabel attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "primaryAttrValue",
+          "type": "string",
+          "description": "primaryAttrValue attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrLabel",
+          "type": "string",
+          "description": "secondaryAttrLabel attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "secondaryAttrValue",
+          "type": "string",
+          "description": "secondaryAttrValue attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricLabel",
+          "type": "string",
+          "description": "metricLabel attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "metricValue",
+          "type": "string",
+          "description": "metricValue attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "operationalSummary",
+          "type": "string",
+          "description": "operationalSummary attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "invariantRule",
+          "type": "string",
+          "description": "invariantRule attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "crossSuiteRef",
+          "type": "string",
+          "description": "crossSuiteRef attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "string",
+          "description": "updatedAt attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "contactPhone",
+          "type": "string",
+          "description": "contactPhone attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
+        },
+        {
+          "name": "moderationStage",
+          "type": "string",
+          "description": "moderationStage attribute for ReaTenantHealthScorecard",
+          "isRequired": false,
+          "isHidden": false,
+          "isArray": false
         }
       ],
       "relations": [
@@ -5941,146 +6881,371 @@
       ]
     }
   ],
-  "variables": [],
-  "tools": [],
-  "workflows": [],
-  "coverPage": "# Rapider Tenant Engagement & Building Experience\n\n**Suite:** Rapider Real Estate Suite\n\n**Executive Outcome:**  \n`tenant-engagement-and-building-experience` serves Commercial Office Landlords, Mixed-Use Campus Operators, Class-A Multifamily Communities, and Tenant Suite Administrators as the unified **Digital Front Door and Tenant Retention Platform**. Layered directly over `#141` (`property-management`) and `#145` (`commercial-lease-administration`), it governs delegated tenant-company member rosters (`ReaTenantMemberProfile`) and mobile building passes (`ReaBuildingAccessPass`), shared base-building amenity reservations with lease credit quotas and paid overage billing (`ReaBuildingAmenity`, `ReaAmenityBooking`), tenant operational requests including after-hours overtime HVAC and COI-gated freight-elevator slots (`ReaBuildingServiceRequest`), floor/company-targeted announcements (`ReaBuildingAnnouncement`), ground-floor retail perks (`ReaBuildingPerkOffer`), and account-level Tenant Health & Renewal-Risk scoring (`ReaTenantHealthScorecard`).\n\n**Architectural Distinction from `#146` (`space-planning-and-workplace-utilization`):**  \n`#146` manages a single corporate employer's *internal* hybrid seating, floor restacks, and employee desk hoteling. `#149` is the **multi-tenant landlord-to-transaction & lease lifecycle building experience layer** governing shared base-building amenities across distinct tenant companies (`CrmAccount`s), freight docks, overtime HVAC billing, community events, retail perks, and lease-renewal retention telemetry!\n\n**SME Fast-Path vs. Enterprise Progressive Disclosure:**\n- **SME Fast-Path:** Activate a branded mobile/web Building Hub (`390px`) for a commercial or mixed-use property in minutes, let Tenant Office Managers board meeting intelligence their own suite employees, publish building advisories, enable 1-tap `Too Hot / Too Cold` requests routed straight to `maintenance`, and book shared conference rooms or rooftop lounges.\n- **Enterprise Depth:** Portfolio Passport cross-building lounge access (`enterprise industry standard` / `tenant workplace experience`), lease-clause monthly free-hour credit pools + `\\$125.00/hr` paid overage & `\\$65.00/hr` Saturday overtime HVAC billing (`institutional property accounting` / `Cove` -> `billing`), COI-verified freight-dock scheduling via Home `WorkItem`s, live IAQ/ESG comfort cards (`community & amenity booking`), and REX-style Tenant Health & Churn Risk scorecards alerting Asset Managers 12 months before `#145` lease expirations.\n\n**Target Personas:**\n1. **Property Experience / Community Manager:** Curates `ReaBuildingAnnouncement`s, community `MktEvent`s, local `ReaBuildingPerkOffer`s, approves shared town-hall bookings and freight-dock COIs.\n2. **Tenant Suite / Office Administrator (Scoped Commercial Tenant Role):** Self-manages company `ReaTenantMemberProfile` roster, authorizes overtime HVAC & paid amenity bookings, pre-clears `#147` lobby guests, and tracks suite service tickets.\n3. **Building Occupant / Resident:** Uses `390px` mobile pass, RSVPs to rooftop yoga/networking events, redeems lobby coffee perks, books wellness/fitness slots, and rates completed repair requests.\n4. **Landlord Asset / Leasing Director:** Monitors `ReaTenantHealthScorecard` across expiring `#145` commercial tenants to prevent surprise move-outs.\n",
-  "scopeOfWork": "# #149 Tenant Engagement & Building Experience (`tenant-engagement-and-building-experience`) — Scope of Work (SOW)\n\n- **App Number & Name:** `#149` — Tenant Engagement & Building Experience\n- **App Key:** `tenant-engagement-and-building-experience`\n- **Rapider Suite / Domain Key:** `REA` (Real Estate, Facilities & Construction Suite)\n- **Model Prefix:** `Rea*`\n- **Industry Benchmark Standard:** Benchmarked against leading global enterprise platforms in this category\n- **Industry Benchmark Alignment:** Benchmarked against leading global enterprise platforms to combine fast SME time-to-value with enterprise-scale governance, auditability, and cross-suite automation on Rapider.\n- **Companion Combined Feature Set:** [`../combined-features/149-tenant-engagement-and-building-experience-features.md`](../combined-features/149-tenant-engagement-and-building-experience-features.md)\n\n---\n\n## 1. Executive Outcome & Target Audience\n\n**Executive Outcome:**  \n`tenant-engagement-and-building-experience` serves Commercial Office Landlords, Mixed-Use Campus Operators, Class-A Multifamily Communities, and Tenant Suite Administrators as the unified **Digital Front Door and Tenant Retention Platform**. Layered directly over `#141` (`property-management`) and `#145` (`commercial-lease-administration`), it governs delegated tenant-company member rosters (`ReaTenantMemberProfile`) and mobile building passes (`ReaBuildingAccessPass`), shared base-building amenity reservations with lease credit quotas and paid overage billing (`ReaBuildingAmenity`, `ReaAmenityBooking`), tenant operational requests including after-hours overtime HVAC and COI-gated freight-elevator slots (`ReaBuildingServiceRequest`), floor/company-targeted announcements (`ReaBuildingAnnouncement`), ground-floor retail perks (`ReaBuildingPerkOffer`), and account-level Tenant Health & Renewal-Risk scoring (`ReaTenantHealthScorecard`).\n\n**Architectural Distinction from `#146` (`space-planning-and-workplace-utilization`):**  \n`#146` manages a single corporate employer's *internal* hybrid seating, floor restacks, and employee desk hoteling. `#149` is the **multi-tenant landlord-to-transaction & lease lifecycle building experience layer** governing shared base-building amenities across distinct tenant companies (`CrmAccount`s), freight docks, overtime HVAC billing, community events, retail perks, and lease-renewal retention telemetry!\n\n**SME Fast-Path vs. Enterprise Progressive Disclosure:**\n- **SME Fast-Path:** Activate a branded mobile/web Building Hub (`390px`) for a commercial or mixed-use property in minutes, let Tenant Office Managers board meeting intelligence their own suite employees, publish building advisories, enable 1-tap `Too Hot / Too Cold` requests routed straight to `maintenance`, and book shared conference rooms or rooftop lounges.\n- **Enterprise Depth:** Portfolio Passport cross-building lounge access (`enterprise industry standard` / `tenant workplace experience`), lease-clause monthly free-hour credit pools + `\\$125.00/hr` paid overage & `\\$65.00/hr` Saturday overtime HVAC billing (`institutional property accounting` / `Cove` -> `billing`), COI-verified freight-dock scheduling via Home `WorkItem`s, live IAQ/ESG comfort cards (`community & amenity booking`), and REX-style Tenant Health & Churn Risk scorecards alerting Asset Managers 12 months before `#145` lease expirations.\n\n**Target Personas:**\n1. **Property Experience / Community Manager:** Curates `ReaBuildingAnnouncement`s, community `MktEvent`s, local `ReaBuildingPerkOffer`s, approves shared town-hall bookings and freight-dock COIs.\n2. **Tenant Suite / Office Administrator (Scoped Commercial Tenant Role):** Self-manages company `ReaTenantMemberProfile` roster, authorizes overtime HVAC & paid amenity bookings, pre-clears `#147` lobby guests, and tracks suite service tickets.\n3. **Building Occupant / Resident:** Uses `390px` mobile pass, RSVPs to rooftop yoga/networking events, redeems lobby coffee perks, books wellness/fitness slots, and rates completed repair requests.\n4. **Landlord Asset / Leasing Director:** Monitors `ReaTenantHealthScorecard` across expiring `#145` commercial tenants to prevent surprise move-outs.\n\n---\n\n## 2. In-Scope, Out-of-Scope & Suite Ownership Boundaries\n\n### In Scope\n- `ReaTenantMemberProfile` onboarding, delegated `TENANT_COMPANY_ADMIN` roster self-service, `ReaBuildingAccessPass` mobile/Passport credentials, 1-tap `#147` guest pre-clearance, and Digital Building Guides (`TEB-001`–`TEB-006`).\n- `ReaBuildingAmenity` catalog, `ReaAmenityBooking` (monthly free lease-credit quotas, paid `Decimal128` overage & cleaning fees -> `billing`/`payments`, digital liability waivers, auto-spawned `maintenance` setup/cleaning WOs, cancellation cutoffs) (`TEB-007`–`TEB-012`).\n- `ReaBuildingServiceRequest` intake (comfort/repair -> `maintenance` `MfgMaintenanceWorkOrder`; concierge -> `support` `SupTicket`; after-hours HVAC -> `billing`; freight-elevator/loading-dock COI gates -> `WorkItem`s), IAQ/ESG widgets, and outage push banners (`TEB-013`–`TEB-017`).\n- Segmented `ReaBuildingAnnouncement` broadcasts, `events` (`MktEvent`) community RSVPs, `ReaBuildingPerkOffer` retail redemptions, `surveys` (`MktSurvey`) NPS pulses, `ReaTenantHealthScorecard` retention scoring, and grounded experience AI copilots (`TEB-018`–`TEB-028`).\n\n### Out of Scope\n- Executing technician dispatch, preventive asset maintenance, or spare parts (owned by `maintenance` and `assets`).\n- Lobby kiosk ID scanning, watchlist blocklists, and emergency muster roll calls (owned by `#147` `visitor-and-reception-management`).\n- Underlying lease rent rolls, ASC 842 schedules, and CAM desktop audits (owned by `#141` and `#145`).\n- Payment card tokenization, invoice tax engines, and GL accounting (owned by `billing`, `payments`, and `acc`).\n\n### Suite Ownership & Integration Contract Table\n\n| Domain / App | Owns | Integration Contract with `tenant-engagement-and-building-experience` |\n| :--- | :--- | :--- |\n| **`tenant-engagement-and-building-experience` (`REA`)** | `ReaTenantMemberProfile`, `ReaBuildingAccessPass`, `ReaBuildingAmenity`, `ReaAmenityBooking`, `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, `ReaTenantHealthScorecard` | Governs occupant experience, shared building amenities, freight/overtime-HVAC requests, announcements, perks, and tenant retention health. |\n| **`property-management` (`#141`) & `commercial-lease-admin` (`#145`)** | `ReaProperty`, `ReaUnit`, `ReaTenancyLease`, `ReaCommercialLease` | Supplies building/suite hierarchy, overtime HVAC hourly lease rates, monthly free amenity credits, and lease expiration dates. |\n| **`maintenance` (`MFG`) & `support` (`SUP`)** | `MfgMaintenanceWorkOrder`, `SupTicket` | Executes physical suite/building repair work orders, amenity setup/cleanup WOs, and concierge helpdesk tickets; returns live status updates to `#149`. |\n| **`visitor-and-reception-management` (`#147` — `REA`)** | `ReaVisitorVisit` | Receives 1-tap tenant guest pre-clearances for ground-floor lobby turnstiles. |\n| **`billing` & `payments` (`FIN` — Built)** | `FinInvoice`, `FinPaymentIntent` | Bills commercial tenant accounts or individual occupants for paid amenity overages and after-hours HVAC zone usage. |\n| **`crm`, `events`, `surveys`, `email` & `sms` (`CRM`/`MKT`)** | `CrmAccount`, `CrmContact`, `MktEvent`, `MktSurvey`, `MktEmailMessage`, `MktSmsMessage` | Powers tenant company accounts, community event RSVPs, NPS pulse surveys, and multi-channel building alerts. |\n\n---\n\n## 3. Primary Web Pages & Sidebar Navigation Architecture (12 Pages)\n\nAll visible sidebar groups strictly satisfy Rapider's **Minimum 3 Items per Section Rule** (`Community & Experience`: 3 items, `Amenities & Building Ops`: 3 items, `Tenants & Retention`: 3 items; 9 visible + 3 hidden detail/drawer routes = 12 total pages).\n\n| # | Route | Page Title | Sidebar Section | Menu Visible | Key Components & UX |\n| :---: | :--- | :--- | :--- | :---: | :--- |\n| 1 | `building-experience-feed` | Building Hub & Live Feed | `Community & Experience` | `true` | Outage alert banner, KPI strip (`Active Occupants`, `Amenity Bookings Today`, `Open Suite Requests`, `Portfolio NPS`), `ReaBuildingAnnouncement` feed, IAQ/ESG widget, `#activeFilterTagsBar`. |\n| 2 | `events-community` | Community Events & Polls | `Community & Experience` | `true` | Building `MktEvent` calendar & RSVP capacity cards, `MktSurvey` pulse polls, attendance breakdown by tenant company. |\n| 3 | `perks-building-guide` | Local Perks & Building Guide | `Community & Experience` | `true` | `ReaBuildingPerkOffer` marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info). |\n| 4 | `shared-amenities` | Shared Amenities & Bookings | `Amenities & Building Ops` | `true` | `ReaBuildingAmenity` catalog + `ReaAmenityBooking` timeline/table (`Free Credits Used`, `Paid Overage \\$`, waiver badge, auto-cleanup WO link). |\n| 5 | `service-hvac-requests` | Suite Service & Overtime HVAC | `Amenities & Building Ops` | `true` | `<rapider-kanban>` (`Submitted` -> `Routed to Maintenance/Concierge` -> `In Progress` -> `Completed & Rated`) for `ReaBuildingServiceRequest`s + Overtime HVAC scheduler. |\n| 6 | `freight-dock-schedule` | Freight Elevator & Dock Slots | `Amenities & Building Ops` | `true` | Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home `WorkItem` approval badge. |\n| 7 | `tenant-roster-passes` | Tenant Roster & Mobile Passes | `Tenants & Retention` | `true` | `findSWR` `ReaTenantMemberProfile` & `ReaBuildingAccessPass` directory (`Delegated Suite Admin` self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke. |\n| 8 | `tenant-health-retention` | Tenant Health & Renewal Risk | `Tenants & Retention` | `true` | `ReaTenantHealthScorecard` table across `CrmAccount`s (`Health Score 0–100`, `Adoption %`, `WO CSAT`, `NPS`, `#145 Lease Expiry`, `At-Risk` pill), AI Renewal Brief trigger. |\n| 9 | `announcements-studio` | Targeted Broadcasts Studio | `Tenants & Retention` | `true` | `ReaBuildingAnnouncement` audience segmenter (`Property`, `Floors`, `Tenant Company`, `Suite Admins`), read-receipt % analytics, AI copywriter helper. |\n| 10 | `tenant-account-detail` | Tenant Company Experience 360 | *(Hidden)* | `false` | Deep-link route (`#/tenant-account-detail?id=...`) with `Back` filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and `projectChannelMessage` thread. |\n| 11 | `amenity-booking-detail` | Amenity Booking & Waiver 360 | *(Hidden)* | `false` | Deep-link route (`#/amenity-booking-detail?id=...`) showing signed liability waiver PDF ref, setup/cleanup `MfgMaintenanceWorkOrder`, and `FinInvoice` fee breakdown. |\n| 12 | `request-amenity-drawer` | Booking / HVAC / Member Drawer | *(Hidden)* | `false` | Mobile-ready (`390px`) sliding drawer with `<rapider-phone-input>`, live credit/fee preview, `try...catch...finally` button reset, auto-close, and SWR invalidation. |\n\n---\n\n## 4. Canonical Data Models (`Rea*` — 8 Models)\n\n| Model Name | Key Fields & Types | Relationships & External Refs | Invariants & Lifecycle |\n| :--- | :--- | :--- | :--- |\n| **`ReaTenantMemberProfile`** | `memberRole` (`TENANT_COMPANY_ADMIN`, `TENANT_OCCUPANT`, `RESIDENT`, `RETAIL_MERCHANT`), `canAuthorizeBillableCharges` (`Boolean`), `monthlyAmenityCreditsRemaining` (`Decimal128`), `signedWaiverTypes` (`String[]`), `phone` (`String`), `status` (`INVITED`, `ACTIVE`, `SUSPENDED`, `OFFBOARDED`), `version` (`Integer`) | `propertyId` -> `ReaProperty` (`#141`), `unitId` -> `ReaUnit` (`#141`), `tenantAccountRef` -> `CrmAccount`, `crmContactRef` -> `CrmContact`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `tenancyLeaseId` -> `ReaTenancyLease` (`#141`, nullable) | Strictly isolated by `(propertyId, tenantAccountRef)` for `TENANT_COMPANY_ADMIN`; transitioning to `OFFBOARDED` atomically revokes all active `ReaBuildingAccessPass` credentials. |\n| **`ReaBuildingAccessPass`** | `passCode` (`String`), `passTier` (`HOME_BUILDING`, `PORTFOLIO_PASSPORT`), `allowedPropertyIds` (`UUID[]`), `allowedZones` (`String[]`: `LOBBY_TURNSTILE`, `SUITE_FLOOR`, `FITNESS_CENTER`, `BIKE_CAGE`), `issuedAt` (`DateTime`), `revokedAt` (`DateTime`), `status` (`ACTIVE`, `SUSPENDED`, `REVOKED`), `version` (`Integer`) | `memberProfileId` -> `ReaTenantMemberProfile`, `homePropertyId` -> `ReaProperty` | Adding `FITNESS_CENTER` to `allowedZones` requires `\"FITNESS_LIABILITY\"` in `memberProfile.signedWaiverTypes`. |\n| **`ReaBuildingAmenity`** | `amenityCode` (`String`), `name` (`String`), `category` (`AUDITORIUM`, `ROOFTOP_TERRACE`, `CONFERENCE_CENTER`, `FITNESS_STUDIO`, `LOUNGE`, `WELLNESS_ROOM`, `FREIGHT_DOCK`), `capacity` (`Integer`), `hourlyRate` (`Decimal128`), `cleaningFee` (`Decimal128`), `setupBufferMinutes` (`Integer`), `cleanupBufferMinutes` (`Integer`), `cancellationCutoffHours` (`Integer`), `requiredWaiverType` (`String`), `approvalMode` (`AUTO_APPROVE`, `MANAGER_APPROVAL`), `status` (`AVAILABLE`, `MAINTENANCE_OUTAGE`), `version` (`Integer`) | `propertyId` -> `ReaProperty` | `hourlyRate >= 0` and `cleaningFee >= 0` (`Decimal128`). |\n| **`ReaAmenityBooking`** | `bookingCode` (`String`), `startAt` (`DateTime`), `endAt` (`DateTime`), `effectiveBlockStartAt` (`DateTime`), `effectiveBlockEndAt` (`DateTime`), `attendeeCount` (`Integer`), `freeCreditsAppliedHours` (`Decimal128`), `billableOverageAmount` (`Decimal128`), `cleaningFeeAmount` (`Decimal128`), `totalChargeAmount` (`Decimal128`), `status` (`PENDING_APPROVAL`, `CONFIRMED`, `CANCELLED`, `COMPLETED`, `NO_SHOW`), `version` (`Integer`) | `amenityId` -> `ReaBuildingAmenity`, `memberProfileId` -> `ReaTenantMemberProfile`, `tenantAccountRef` -> `CrmAccount`, `waiverPdfFileRef` -> Rapider Drive (nullable), `setupWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `approvalWorkItemId` -> Home `WorkItem` (nullable) | Non-overlapping `[effectiveBlockStartAt, effectiveBlockEndAt)` (`startAt - setupBuffer` to `endAt + cleanupBuffer`) per `amenityId`; when `totalChargeAmount > \\$0.00` on a commercial account, requires `memberProfile.canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingServiceRequest`** | `requestNumber` (`String`), `requestType` (`THERMAL_COMFORT`, `REPAIR_CLEANING`, `OVERTIME_HVAC`, `FREIGHT_ELEVATOR`, `CONCIERGE`), `scheduledStartAt` (`DateTime`), `scheduledEndAt` (`DateTime`), `overtimeHvacHours` (`Decimal128`), `overtimeBillableAmount` (`Decimal128`), `vendorCoiVerified` (`Boolean`), `csatRating` (`Integer`, `1..5`), `status` (`SUBMITTED`, `PENDING_COI_APPROVAL`, `ROUTED_IN_PROGRESS`, `COMPLETED`, `CANCELLED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `unitId` -> `ReaUnit`, `requesterMemberId` -> `ReaTenantMemberProfile`, `maintenanceWorkOrderRef` -> `MfgMaintenanceWorkOrder` (nullable), `supportTicketRef` -> `SupTicket` (nullable), `finInvoiceRef` -> `FinInvoice` (nullable), `coiFileRef` -> Rapider Drive (nullable) | `FREIGHT_ELEVATOR` requests cannot transition to `ROUTED_IN_PROGRESS` until `vendorCoiVerified == true` via Property Manager `WorkItem`; `OVERTIME_HVAC` requires `canAuthorizeBillableCharges == true`. |\n| **`ReaBuildingAnnouncement`** | `headline` (`String`), `bodyMarkdown` (`String`), `urgency` (`PINNED_EMERGENCY`, `OPERATIONAL_OUTAGE`, `COMMUNITY_NEWS`), `targetFloorCodes` (`String[]`), `targetTenantAccountRefs` (`UUID[]`), `suiteAdminsOnly` (`Boolean`), `publishedAt` (`DateTime`), `expiresAt` (`DateTime`), `readCount` (`Integer`), `status` (`DRAFT`, `PUBLISHED`, `ARCHIVED`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `authorEmployeeRef` -> `HrEmployee` | Strictly filters feed visibility so tenant `A` never sees suite-specific advisories targeted exclusively to `targetTenantAccountRefs = [Tenant B]`. |\n| **`ReaBuildingPerkOffer`** | `merchantName` (`String`), `offerTitle` (`String`), `discountSummary` (`String`), `promoCode` (`String`), `validFrom` (`Date`), `validTo` (`Date`), `redemptionCount` (`Integer`), `status` (`ACTIVE`, `EXPIRED`), `version` (`Integer`) | `propertyIds[]` -> `ReaProperty`, `merchantAccountRef` -> `CrmAccount` (nullable) | Tracks anonymized per-offer redemptions without exposing individual occupant names to external retail merchants. |\n| **`ReaTenantHealthScorecard`** | `periodKey` (`YYYY-MM`), `activeMemberAdoptionPct` (`Decimal128`), `avgServiceCsat` (`Decimal128`), `slaBreachCount` (`Integer`), `amenityEventEngagementScore` (`Decimal128`), `latestNpsScore` (`Decimal128`), `compositeHealthScore` (`Decimal128`, `0..100`), `riskBand` (`HEALTHY`, `WATCH`, `AT_RISK`), `monthsToLeaseExpiry` (`Integer`), `version` (`Integer`) | `propertyId` -> `ReaProperty`, `tenantAccountRef` -> `CrmAccount`, `commercialLeaseId` -> `ReaCommercialLease` (`#145`, nullable), `retentionWorkItemId` -> Home `WorkItem` (nullable) | Auto-opens a Landlord Retention `WorkItem` when `riskBand == AT_RISK && monthsToLeaseExpiry <= 12`. |\n\n---\n\n## 5. Core End-to-End User Journeys (6 Journeys)\n\n### Journey 1: Delegated Tenant Suite Admin Onboarding & Fitness Waiver Mobile Pass\n1. Landlord onboards `Horizon BioLabs` (`Floor 14`, `ReaCommercialLease` in `#145`) and designates `Dana` as `TENANT_COMPANY_ADMIN`.\n2. Dana logs into `tenant-roster-passes`, imports 38 `Horizon BioLabs` employees (`ProvisionTenantMember`), and grants her Operations Lead `canAuthorizeBillableCharges = true`.\n3. Employee `Marcus` opens `#149` on `390px` mobile, receives his lobby/Floor 14 `ReaBuildingAccessPass`, signs the digital `FITNESS_LIABILITY` waiver (`Rapider Drive`), and immediately unlocks `FITNESS_CENTER` access on his pass.\n\n### Journey 2: Shared Town-Hall Amenity Booking with Free Lease Credits, Overage Billing & Setup WO\n1. `Horizon BioLabs` (`8.00` free conference-center hours/month) books `2nd Floor Town-Hall Auditorium` for a 10-hour all-hands (`08:00–18:00`, `30m` setup + `30m` cleanup buffers, `\\$125.00/hr` overage, `\\$75.00` cleaning fee) via `request-amenity-drawer`.\n2. Engine applies `8.00` free hours, calculates exact `Decimal128` `2.00 * \\$125.00 + \\$75.00 = \\$325.00` `totalChargeAmount`, verifies the requester has `canAuthorizeBillableCharges = true`, and routes a `MANAGER_APPROVAL` Home `WorkItem` to the Property Experience Manager.\n3. Upon approval (`ApproveAmenityBooking`), `#149` locks `[07:30, 18:30)` on `shared-amenities`, emits a `\\$325.00` `FinInvoice` intent to `billing`, and spawns a `Chair Setup + Post-Event Cleaning` `MfgMaintenanceWorkOrder` in `maintenance`.\n\n### Journey 3: Tenant `Too Cold` Comfort Request & Billable Saturday Overtime HVAC\n1. Occupant taps **New Request** (`390px`) on `service-hvac-requests` (`THERMAL_COMFORT`: *\"Suite 1400 West conference room is 63°F\"*). `#149` creates a linked `MfgMaintenanceWorkOrder` in `maintenance`; once the building engineer adjusts the VAV damper, the occupant taps a `5-Star` CSAT rating.\n2. For a Saturday product launch, Dana submits an `OVERTIME_HVAC` request (`Saturday 08:00–13:00 = 5.00 hrs @ \\$65.00/hr = \\$325.00`), queuing the BMS schedule for building engineering and posting the `\\$325.00` charge to `billing`.\n\n### Journey 4: Freight-Elevator Slot Reservation with Vendor COI Gate\n1. `Horizon BioLabs` schedules a lab-bench delivery (`Thursday 18:00–20:00`) on `freight-dock-schedule` and uploads the moving company's COI PDF.\n2. Booking enters `PENDING_COI_APPROVAL` and creates a Property Manager Home `WorkItem`. Once verified (`vendorCoiVerified = true`), the dock slot locks and `#147` receives pre-clearance for the delivery crew.\n\n### Journey 5: At-Risk Tenant Health Detection 9 Months Before `#145` Lease Expiration\n1. Monthly `wf-rea-tenant-health-scorer` computes `ReaTenantHealthScorecard` for `Vertex Media` (`monthsToLeaseExpiry = 9` from `#145`), detecting `3` HVAC SLA breaches in `maintenance`, dropped app engagement, and an `NPS` drop, lowering `compositeHealthScore` to `52.00` (`AT_RISK`).\n2. `#149` opens an urgent Retention Home `WorkItem` for the Landlord Asset Director, who opens `tenant-account-detail` and runs **AI Renewal Brief** to prepare a targeted executive check-in before renewal talks start.\n\n### Journey 6: Click-Through Navigation & Filter State Restoration\n1. Property Manager filters `tenant-health-retention` by `Risk Band: \"AT_RISK\"`, verifying `#activeFilterTagsBar` chips and `[Clear all]`, clicks `Vertex Media` to open `#/tenant-account-detail?id=...` cleanly, and clicks `Back` to restore filter state.\n\n---\n\n## 6. Consolidated Feature Priorities & Work Packages (`P0`, `P1`, `P2`)\n\n### `P0` Foundation Work Packages (10 Capabilities)\n- **WP-P0-1 — Tenant Rosters, Delegated Suite Admins, Mobile Passes & `#147` Guest Sync (`TEB-001`–`TEB-003`, `TEB-005`):** `ReaTenantMemberProfile`, `TENANT_COMPANY_ADMIN` self-service, `ReaBuildingAccessPass`, and 1-tap `#147` visitor pre-clearance (`tenant-roster-passes`).\n- **WP-P0-2 — Shared Amenities, Lease Credits & Paid Overage Billing (`TEB-007`, `TEB-008`):** `ReaBuildingAmenity` and buffer-aware `ReaAmenityBooking` -> `billing`/`payments` (`shared-amenities`, `amenity-booking-detail`, `request-amenity-drawer`).\n- **WP-P0-3 — Suite Service Triage (`maintenance`/`support`), Overtime HVAC, Segmented Feed & Health Scorecards (`TEB-013`, `TEB-014`, `TEB-018`, `TEB-022`):** `ReaBuildingServiceRequest`, `ReaBuildingAnnouncement`, and `ReaTenantHealthScorecard` (`building-experience-feed`, `service-hvac-requests`, `announcements-studio`, `tenant-health-retention`, `tenant-account-detail`).\n\n### `P1` Scale & Enterprise Work Packages (11 Capabilities)\n- **WP-P1-1 — Portfolio Passports, Building Guides, Waivers, Cleanup WOs & Cutoff Rules (`TEB-004`, `TEB-006`, `TEB-009`–`TEB-011`):** Multi-building passes, digital handbooks, fitness/event waivers, auto-spawned `maintenance` setup/cleanup WOs, and cancellation cutoffs (`perks-building-guide`).\n- **WP-P1-2 — Freight-Dock COI Gates, Outage Banners, Community Events, Perks, Surveys & Churn `WorkItem`s (`TEB-015`, `TEB-017`, `TEB-019`–`TEB-021`, `TEB-023`):** Freight-dock scheduling (`freight-dock-schedule`), outage banners, `MktEvent` RSVPs (`events-community`), `ReaBuildingPerkOffer` redemptions, `MktSurvey` NPS, and `AT_RISK` Asset-Manager `WorkItem`s.\n\n### `P2` Adjacent & Grounded AI Work Packages (7 Capabilities)\n- **WP-P2-1 — Off-Peak Promos, Live IAQ/ESG Cards & Portfolio Retention Scorecard (`TEB-012`, `TEB-016`, `TEB-028`):** Off-peak amenity slots, CO₂/energy widgets, and executive retention analytics.\n- **WP-P2-2 — Grounded tenant workplace experience-REX-Style Building Experience AI (`TEB-024`–`TEB-027`):** Building Guide AI concierge, cited `#145` tenant renewal-brief generator, advisory/event copywriter, and amenity programming recommender.\n\n---\n\n## 7. Roles, Permissions & Field-Level Governance\n\n| Role | Permitted Actions | Restricted / Field-Level Boundaries |\n| :--- | :--- | :--- |\n| **Landlord Asset / Experience Manager** | Full CRUD on `ReaBuildingAmenity`, `ReaBuildingAnnouncement`, `ReaBuildingPerkOffer`, approves amenity & freight-dock `WorkItem`s, views all `ReaTenantHealthScorecard`s. | Cannot impersonate tenant billable authorization (`canAuthorizeBillableCharges`) without audited tenant request. |\n| **Tenant Suite Admin (`TENANT_COMPANY_ADMIN`)** | Invites/offboards own `tenantAccountRef` `ReaTenantMemberProfile`s, toggles `canAuthorizeBillableCharges` for own employees, books overtime HVAC/freight/paid amenities, views own company requests & invoices. | Strictly isolated to own `(propertyId, tenantAccountRef)`: zero visibility into other tenant companies' rosters, health scores, or service tickets! |\n| **Tenant Occupant / Resident** | Uses `ReaBuildingAccessPass`, pre-clears `#147` guests, RSVPs to `MktEvent`s, redeems perks, submits comfort/repair `ReaBuildingServiceRequest`s, books free/self-pay amenities. | Cannot incur company-billed amenity overages or overtime HVAC unless `canAuthorizeBillableCharges == true`; zero visibility into Landlord `ReaTenantHealthScorecard`. |\n\n---\n\n## 8. Technical APIs, Guarded Commands, Events & `requiredWorkflows`\n\n### Guarded Domain Commands\nEvery command enforces `{ idempotencyKey, correlationId, expectedVersion }`:\n1. `ProvisionOrOffboardTenantMember({ memberProfileId, action, memberData })` — Issues or atomically revokes `ReaBuildingAccessPass` credentials.\n2. `BookBuildingAmenity({ amenityId, memberProfileId, startAt, endAt, attendeeCount })` — Enforces non-overlapping `[startAt - setupBuffer, endAt + cleanupBuffer)`, checks waiver & billable authorization, deducts free credits, and routes `WorkItem` or confirms + emits `FinInvoice` + setup `MfgMaintenanceWorkOrder`.\n3. `SubmitBuildingServiceRequest({ propertyId, unitId, requesterMemberId, requestType, payload })` — Dispatches `MfgMaintenanceWorkOrder` (`maintenance`), `SupTicket` (`support`), `OVERTIME_HVAC` `FinInvoice` (`billing`), or `FREIGHT_ELEVATOR` COI `WorkItem`.\n4. `VerifyFreightDockCoiAndApprove({ requestId, approvalWorkItemId })` — Locks freight-dock slot and pre-clears vendor crew in `#147`.\n5. `PublishBuildingAnnouncement({ propertyId, headline, bodyMarkdown, urgency, targetFloorCodes[], targetTenantAccountRefs[] })` — Publishes segmented post and dispatches `email`/`sms` alerts.\n\n### Domain Events Published & Consumed (Kafka)\n- **Published:** `rea.tenant_member.offboarded`, `rea.amenity_booking.confirmed`, `rea.overtime_hvac.scheduled`, `rea.freight_dock.approved`, `rea.building_announcement.published`, `rea.tenant_health.at_risk_flagged`.\n- **Consumed:** `rea.commercial_lease.activated` & `.terminated` (from `#145`), `rea.tenancy_lease.activated` & `.terminated` (from `#141`), `mfg.maintenance_work_order.completed` (from `maintenance` to prompt occupant `1–5` star CSAT), `mkt.survey.response_recorded` (from `surveys`).\n\n### `requiredWorkflows` (in `app.manifest.json`)\n- `wf-rea-monthly-amenity-credit-reset`: Replenishes commercial lease monthly free amenity credit balances on the 1st of each month.\n- `wf-rea-tenant-health-scorer`: Computes `ReaTenantHealthScorecard` and opens Asset-Manager Home `WorkItem`s for `AT_RISK` expiring tenants.\n- `wf-rea-lease-expiry-pass-revoker`: Revokes `ReaBuildingAccessPass` credentials automatically when a `#141` or `#145` lease terminates.\n\n### Grounded Rapider AI Contract\nAI assistants (`TEB-024`–`TEB-027`) strictly enforce multi-tenant company isolation (`Tenant A` users can never query `Tenant B` tickets or Landlord `ReaTenantHealthScorecard`s), cite exact Building Guide sections and `workOrderNumber`s, and require explicit human confirmation before submitting billable HVAC/amenity charges or broadcasting building-wide alerts.\n\n---\n\n## 9. Security, Privacy, Compliance & Non-Functional Requirements\n\n- **Strict Multi-Tenant Company Isolation:** Row-level ACL filters guarantee `TENANT_COMPANY_ADMIN` and `TENANT_OCCUPANT` users in a multi-tenant office tower never see another company's employees, bookings, or requests, and Landlord internal churn/health scores (`ReaTenantHealthScorecard`) are strictly hidden from all tenant roles.\n- **GDPR / CCPA Occupant Privacy:** Retail perk redemptions and IAQ/engagement analytics aggregate at the building/company level without selling or sharing occupant PII with third-party merchants; offboarded member profiles scrub contact PII per retention policy.\n- **Mobile-First Daily Utility (`390px` / `768px` / `1440px`):** WCAG 2.2 AA contrast (`#ffffff !important` on primary/danger buttons), `< 1.5s` mobile pass render at `390px` for lobby turnstile entry, and full dark/light theme support.\n\n---\n\n## 10. Deterministic Acceptance Criteria (14 Testable Criteria)\n\n1. **Sidebar Section 3+ Item Compliance:** `Community & Experience` (3 items), `Amenities & Building Ops` (3 items), and `Tenants & Retention` (3 items) each contain `>= 3` visible items; `tenant-account-detail`, `amenity-booking-detail`, and `request-amenity-drawer` set `displayOnMenu: false`.\n2. **Cross-Tenant Company Isolation:** Querying `tenant-roster-passes`, `service-hvac-requests`, or `building-experience-feed` as `Tenant A` returns zero records scoped exclusively to `Tenant B`, and `403` on `ReaTenantHealthScorecard`.\n3. **Buffer-Aware Amenity Conflict Guard:** `BookBuildingAmenity` rejects (`409 AMENITY_BUFFER_CONFLICT`) any request whose `[startAt - setupBufferMinutes, endAt + cleanupBufferMinutes)` overlaps an existing `CONFIRMED` booking on that `amenityId`.\n4. **Billable Authorization & Credit Quota Math (`Decimal128`):** Booking an amenity or `OVERTIME_HVAC` resulting in `totalChargeAmount > \\$0.00` rejects with `403 BILLABLE_AUTH_REQUIRED` unless `canAuthorizeBillableCharges == true`, and accurately deducts `monthlyAmenityCreditsRemaining` before computing overage dollars.\n5. **Mandatory Waiver Enforcement:** Attempting to enable `FITNESS_CENTER` on `ReaBuildingAccessPass` or confirm an amenity with `requiredWaiverType` without a signed waiver fails with `422 WAIVER_SIGNATURE_REQUIRED`.\n6. **Freight-Dock COI Gate:** A `FREIGHT_ELEVATOR` `ReaBuildingServiceRequest` remains blocked in `PENDING_COI_APPROVAL` until `VerifyFreightDockCoiAndApprove` executes with an approved `WorkItem`.\n7. **Atomic Pass Revocation on Offboarding:** Offboarding a `ReaTenantMemberProfile` atomically transitions all linked `ReaBuildingAccessPass` records to `REVOKED`.\n8. **Seamless `maintenance` & `support` Routing:** Submitting a `THERMAL_COMFORT` request creates a canonical `MfgMaintenanceWorkOrder` (`maintenance`) rather than a shadow CMMS table, and completing that WO unlocks occupant `1–5` star CSAT capture.\n9. **At-Risk Expiring Lease Escalation:** Computing a `ReaTenantHealthScorecard` with `riskBand == AT_RISK && monthsToLeaseExpiry <= 12` deterministically opens an idempotent Landlord Retention Home `WorkItem`.\n10. **SWR Reads & Active Filter Tags:** Every list/kanban/feed page uses `findSWR`/`countSWR` without manual `isDeleted` `where` clauses, filters `item.isDeleted !== true` in memory, and renders `#activeFilterTagsBar` with escaped chips and `[Clear all]`.\n11. **Table Actions & Real Click-Through Navigation:** Zero standalone \"View\" buttons in `Actions`; clicking tenant company names or `bookingCode`s navigates cleanly to detail routes without `<base href>` 404 traps, and `Back` restores filter state.\n12. **Custom Elements & Drawer Lifecycle:** Uses `<rapider-kanban>` on `service-hvac-requests` and `<rapider-phone-input>` in `request-amenity-drawer`; drawers reset buttons in `finally` and auto-close on save/cancel.\n13. **Zero `projectId` Field:** No `Rea*` model defines `projectId`.\n14. **Theme & Contrast Validation:** All 12 pages pass deterministic dark/light `validate_theme` checks with `#ffffff !important` on primary/danger buttons and zero `window.alert`/`confirm`/`prompt`.\n",
-  "githubRepo": {
-    "name": "rapider-app-tenant-engagement-and-building-experience-rapider-tenant-engagement-building-experience"
-  },
   "webPages": [
     {
       "name": "Building Hub & Live Feed",
       "route": "building-experience-feed",
       "htmlFilePath": "pages/building-experience-feed/building-experience-feed.html",
-      "title": "Building Hub & Live Feed",
+      "title": "Community & Experience",
       "group": "Community & Experience",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 1,
-      "developmentDetails": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar."
+      "developmentDetails": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar.",
+      "pageTitle": "Building Hub & Live Feed",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar."
     },
     {
       "name": "Community Events & Polls",
       "route": "events-community",
       "htmlFilePath": "pages/events-community/events-community.html",
-      "title": "Community Events & Polls",
+      "title": "Community & Experience",
       "group": "Community & Experience",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 2,
-      "developmentDetails": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company."
+      "developmentDetails": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company.",
+      "pageTitle": "Community Events & Polls",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company."
     },
     {
       "name": "Local Perks & Building Guide",
       "route": "perks-building-guide",
       "htmlFilePath": "pages/perks-building-guide/perks-building-guide.html",
-      "title": "Local Perks & Building Guide",
+      "title": "Community & Experience",
       "group": "Community & Experience",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 3,
-      "developmentDetails": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info)."
+      "developmentDetails": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info).",
+      "pageTitle": "Local Perks & Building Guide",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info)."
     },
     {
       "name": "Shared Amenities & Bookings",
       "route": "shared-amenities",
       "htmlFilePath": "pages/shared-amenities/shared-amenities.html",
-      "title": "Shared Amenities & Bookings",
+      "title": "Amenities & Building Ops",
       "group": "Amenities & Building Ops",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 4,
-      "developmentDetails": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage \\$, waiver badge, auto-cleanup WO link)."
+      "developmentDetails": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage $, waiver badge, auto-cleanup WO link).",
+      "pageTitle": "Shared Amenities & Bookings",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage $, waiver badge, auto-cleanup WO link)."
     },
     {
       "name": "Suite Service & Overtime HVAC",
       "route": "service-hvac-requests",
       "htmlFilePath": "pages/service-hvac-requests/service-hvac-requests.html",
-      "title": "Suite Service & Overtime HVAC",
+      "title": "Amenities & Building Ops",
       "group": "Amenities & Building Ops",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 5,
-      "developmentDetails": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler."
+      "developmentDetails": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler.",
+      "pageTitle": "Suite Service & Overtime HVAC",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler."
     },
     {
       "name": "Freight Elevator & Dock Slots",
       "route": "freight-dock-schedule",
       "htmlFilePath": "pages/freight-dock-schedule/freight-dock-schedule.html",
-      "title": "Freight Elevator & Dock Slots",
+      "title": "Amenities & Building Ops",
       "group": "Amenities & Building Ops",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 6,
-      "developmentDetails": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge."
+      "developmentDetails": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge.",
+      "pageTitle": "Freight Elevator & Dock Slots",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge."
     },
     {
       "name": "Tenant Roster & Mobile Passes",
       "route": "tenant-roster-passes",
       "htmlFilePath": "pages/tenant-roster-passes/tenant-roster-passes.html",
-      "title": "Tenant Roster & Mobile Passes",
+      "title": "Tenants & Retention",
       "group": "Tenants & Retention",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 7,
-      "developmentDetails": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke."
+      "developmentDetails": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke.",
+      "pageTitle": "Tenant Roster & Mobile Passes",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke."
     },
     {
       "name": "Tenant Health & Renewal Risk",
       "route": "tenant-health-retention",
       "htmlFilePath": "pages/tenant-health-retention/tenant-health-retention.html",
-      "title": "Tenant Health & Renewal Risk",
+      "title": "Tenants & Retention",
       "group": "Tenants & Retention",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 8,
-      "developmentDetails": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger."
+      "developmentDetails": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger.",
+      "pageTitle": "Tenant Health & Renewal Risk",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger."
     },
     {
       "name": "Targeted Broadcasts Studio",
       "route": "announcements-studio",
       "htmlFilePath": "pages/announcements-studio/announcements-studio.html",
-      "title": "Targeted Broadcasts Studio",
+      "title": "Tenants & Retention",
       "group": "Tenants & Retention",
       "icon": "fas fa-building",
       "displayInMenu": true,
       "order": 9,
-      "developmentDetails": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper."
+      "developmentDetails": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper.",
+      "pageTitle": "Targeted Broadcasts Studio",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper."
     },
     {
       "name": "Tenant Company Experience 360",
       "route": "tenant-account-detail",
       "htmlFilePath": "pages/tenant-account-detail/tenant-account-detail.html",
-      "title": "Tenant Company Experience 360",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-building",
       "displayInMenu": false,
       "order": 10,
-      "developmentDetails": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread."
+      "developmentDetails": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread.",
+      "pageTitle": "Tenant Company Experience 360",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread."
     },
     {
       "name": "Amenity Booking & Waiver 360",
       "route": "amenity-booking-detail",
       "htmlFilePath": "pages/amenity-booking-detail/amenity-booking-detail.html",
-      "title": "Amenity Booking & Waiver 360",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-building",
       "displayInMenu": false,
       "order": 11,
-      "developmentDetails": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown."
+      "developmentDetails": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown.",
+      "pageTitle": "Amenity Booking & Waiver 360",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown."
     },
     {
       "name": "Booking / HVAC / Member Drawer",
       "route": "request-amenity-drawer",
       "htmlFilePath": "pages/request-amenity-drawer/request-amenity-drawer.html",
-      "title": "Booking / HVAC / Member Drawer",
-      "group": "(Hidden)",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
       "icon": "fas fa-building",
       "displayInMenu": false,
       "order": 12,
-      "developmentDetails": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation."
+      "developmentDetails": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation.",
+      "pageTitle": "Booking / HVAC / Member Drawer",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation."
+    }
+  ],
+  "workflows": [],
+  "variables": [],
+  "tools": [],
+  "pages": [
+    {
+      "name": "Building Hub & Live Feed",
+      "route": "building-experience-feed",
+      "htmlFilePath": "pages/building-experience-feed/building-experience-feed.html",
+      "title": "Community & Experience",
+      "group": "Community & Experience",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 1,
+      "developmentDetails": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar.",
+      "pageTitle": "Building Hub & Live Feed",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Outage alert banner, KPI strip (Active Occupants, Amenity Bookings Today, Open Suite Requests, Portfolio NPS), ReaBuildingAnnouncement feed, IAQ/ESG widget, #activeFilterTagsBar."
+    },
+    {
+      "name": "Community Events & Polls",
+      "route": "events-community",
+      "htmlFilePath": "pages/events-community/events-community.html",
+      "title": "Community & Experience",
+      "group": "Community & Experience",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 2,
+      "developmentDetails": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company.",
+      "pageTitle": "Community Events & Polls",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Building MktEvent calendar & RSVP capacity cards, MktSurvey pulse polls, attendance breakdown by tenant company."
+    },
+    {
+      "name": "Local Perks & Building Guide",
+      "route": "perks-building-guide",
+      "htmlFilePath": "pages/perks-building-guide/perks-building-guide.html",
+      "title": "Community & Experience",
+      "group": "Community & Experience",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 3,
+      "developmentDetails": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info).",
+      "pageTitle": "Local Perks & Building Guide",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingPerkOffer marketplace cards with QR promo redemption counters + property-scoped Digital Building Guide (transit, bike room, emergency info)."
+    },
+    {
+      "name": "Shared Amenities & Bookings",
+      "route": "shared-amenities",
+      "htmlFilePath": "pages/shared-amenities/shared-amenities.html",
+      "title": "Amenities & Building Ops",
+      "group": "Amenities & Building Ops",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 4,
+      "developmentDetails": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage $, waiver badge, auto-cleanup WO link).",
+      "pageTitle": "Shared Amenities & Bookings",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingAmenity catalog + ReaAmenityBooking timeline/table (Free Credits Used, Paid Overage $, waiver badge, auto-cleanup WO link)."
+    },
+    {
+      "name": "Suite Service & Overtime HVAC",
+      "route": "service-hvac-requests",
+      "htmlFilePath": "pages/service-hvac-requests/service-hvac-requests.html",
+      "title": "Amenities & Building Ops",
+      "group": "Amenities & Building Ops",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 5,
+      "developmentDetails": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler.",
+      "pageTitle": "Suite Service & Overtime HVAC",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "<rapider-kanban> (Submitted -> Routed to Maintenance/Concierge -> In Progress -> Completed & Rated) for ReaBuildingServiceRequests + Overtime HVAC scheduler."
+    },
+    {
+      "name": "Freight Elevator & Dock Slots",
+      "route": "freight-dock-schedule",
+      "htmlFilePath": "pages/freight-dock-schedule/freight-dock-schedule.html",
+      "title": "Amenities & Building Ops",
+      "group": "Amenities & Building Ops",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 6,
+      "developmentDetails": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge.",
+      "pageTitle": "Freight Elevator & Dock Slots",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "Non-overlapping freight/loading-dock slot calendar + table, vendor COI upload status, Home WorkItem approval badge."
+    },
+    {
+      "name": "Tenant Roster & Mobile Passes",
+      "route": "tenant-roster-passes",
+      "htmlFilePath": "pages/tenant-roster-passes/tenant-roster-passes.html",
+      "title": "Tenants & Retention",
+      "group": "Tenants & Retention",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 7,
+      "developmentDetails": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke.",
+      "pageTitle": "Tenant Roster & Mobile Passes",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "findSWR ReaTenantMemberProfile & ReaBuildingAccessPass directory (Delegated Suite Admin self-service view vs. Landlord full view), Portfolio Passport badge, 1-click Revoke."
+    },
+    {
+      "name": "Tenant Health & Renewal Risk",
+      "route": "tenant-health-retention",
+      "htmlFilePath": "pages/tenant-health-retention/tenant-health-retention.html",
+      "title": "Tenants & Retention",
+      "group": "Tenants & Retention",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 8,
+      "developmentDetails": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger.",
+      "pageTitle": "Tenant Health & Renewal Risk",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaTenantHealthScorecard table across CrmAccounts (Health Score 0–100, Adoption %, WO CSAT, NPS, #145 Lease Expiry, At-Risk pill), AI Renewal Brief trigger."
+    },
+    {
+      "name": "Targeted Broadcasts Studio",
+      "route": "announcements-studio",
+      "htmlFilePath": "pages/announcements-studio/announcements-studio.html",
+      "title": "Tenants & Retention",
+      "group": "Tenants & Retention",
+      "icon": "fas fa-building",
+      "displayInMenu": true,
+      "order": 9,
+      "developmentDetails": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper.",
+      "pageTitle": "Targeted Broadcasts Studio",
+      "type": "AppPage",
+      "displayOnMenu": true,
+      "description": "ReaBuildingAnnouncement audience segmenter (Property, Floors, Tenant Company, Suite Admins), read-receipt % analytics, AI copywriter helper."
+    },
+    {
+      "name": "Tenant Company Experience 360",
+      "route": "tenant-account-detail",
+      "htmlFilePath": "pages/tenant-account-detail/tenant-account-detail.html",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
+      "icon": "fas fa-building",
+      "displayInMenu": false,
+      "order": 10,
+      "developmentDetails": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread.",
+      "pageTitle": "Tenant Company Experience 360",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Deep-link route (#/tenant-account-detail?id=...) with Back filter restoration, suite member list, monthly amenity credit ledger, overtime HVAC history, health trend, and projectChannelMessage thread."
+    },
+    {
+      "name": "Amenity Booking & Waiver 360",
+      "route": "amenity-booking-detail",
+      "htmlFilePath": "pages/amenity-booking-detail/amenity-booking-detail.html",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
+      "icon": "fas fa-building",
+      "displayInMenu": false,
+      "order": 11,
+      "developmentDetails": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown.",
+      "pageTitle": "Amenity Booking & Waiver 360",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Deep-link route (#/amenity-booking-detail?id=...) showing signed liability waiver PDF ref, setup/cleanup MfgMaintenanceWorkOrder, and FinInvoice fee breakdown."
+    },
+    {
+      "name": "Booking / HVAC / Member Drawer",
+      "route": "request-amenity-drawer",
+      "htmlFilePath": "pages/request-amenity-drawer/request-amenity-drawer.html",
+      "title": "*(Hidden)*",
+      "group": "*(Hidden)*",
+      "icon": "fas fa-building",
+      "displayInMenu": false,
+      "order": 12,
+      "developmentDetails": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation.",
+      "pageTitle": "Booking / HVAC / Member Drawer",
+      "type": "AppPage",
+      "displayOnMenu": false,
+      "description": "Mobile-ready (390px) sliding drawer with <rapider-phone-input>, live credit/fee preview, try...catch...finally button reset, auto-close, and SWR invalidation."
     }
   ]
 }
